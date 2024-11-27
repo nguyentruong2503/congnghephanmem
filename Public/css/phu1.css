@@ -1,0 +1,59 @@
+/* Định dạng cơ bản cho modal */
+.modalx {
+    display: none; /* Ẩn modal mặc định */
+    position: fixed; /* Cố định vị trí modal */
+    z-index: 1000; /* Đảm bảo modal nằm trên cùng */
+    left: 0;
+    top: 0;
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    height: 100%; /* Chiếm toàn bộ chiều cao */
+    background-color: rgba(0, 0, 0, 0.5); /* Nền đen mờ */
+}
+
+/* Hộp thoại bên trong modal */
+.modal-dialog {
+    position: relative;
+    margin: auto;
+    top: 100px; /* Căn cách phần trên */
+    width: 50%; /* Chiều rộng modal */
+    background-color: #fff; /* Nền trắng */
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Đổ bóng */
+    animation: fadeIn 0.3s; /* Hiệu ứng xuất hiện */
+}
+
+/* Hiệu ứng mở modal */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Tiêu đề modal */
+.modal-header {
+    padding: 10px 20px;
+    background-color: #007bff; /* Màu nền tiêu đề */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Nút đóng */
+.modal-header .close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Nội dung modal */
+.modal-body {
+    padding: 20px;
+    font-size: 1rem;
+    color: #333;
+}

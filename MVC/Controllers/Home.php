@@ -1,21 +1,23 @@
 <?php
-require_once './MVC/Models/UserModel.php'; // Đảm bảo include đúng file UserModel
 
 class Home extends controller {
     private $userModel;
 
     // Hàm khởi tạo để sử dụng model
     public function __construct() {
-        $this->userModel = new UserModel();
+        $this->userModel=$this->model('UserModel');
     }
 
     // Hàm hiển thị trang login
     public function Get_data() {
-        $this->view('Login');  // Hiển thị view Login.php từ thư mục Views
+        $this->view('mm',[
+            'page'=>'Login'
+        ]
+    );  // Hiển thị view Login.php từ thư mục Views
     }
 
     // Hàm xử lý đăng nhập
-    public function handleLogin() {
+     function handleLogin() {
         if (isset($_POST['txtLogin'])) {
             $username = $_POST['txtName'];
             $password = $_POST['txtPasswd'];
