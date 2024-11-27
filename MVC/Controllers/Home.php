@@ -13,44 +13,48 @@ class Home extends controller {
         $this->view('mm',[
             'page'=>'Login'
         ]
-    );  // Hiển thị view Login.php từ thư mục Views
+    ); 
     }
 
     // Hàm xử lý đăng nhập
-     function handleLogin() {
+    public function handleLogin() {
+        echo "Hàm handleLogin được gọi!<br>";
+        var_dump($_POST); // Xem dữ liệu gửi lên
         if (isset($_POST['txtLogin'])) {
             $username = $_POST['txtName'];
             $password = $_POST['txtPasswd'];
-
+    
             if ($username == "" || $password == "") {
                 echo "<script>alert('Vui lòng nhập đầy đủ thông tin');</script>";
                 return;
             }
-
+    
+            // Kiểm tra người dùng
             $result = $this->userModel->checkUser($username, $password);
-
-            if ($result->num_rows > 0) {
+            if ($result && $result->num_rows > 0) {
                 session_start();
                 $user = $result->fetch_assoc();
                 $_SESSION['Tentaikhoan'] = $user['Tentaikhoan'];
-
+    
                 $loaiTaiKhoan = $user['Loaitaikhoan'];
-
-                // Điều hướng theo loại tài khoản
+    
                 if ($loaiTaiKhoan == "Phongban") {
-                    header('Location: http://localhost/quanlysieuthi/Danhsachsp/hienthi');
+                    header('Location: /quanlysieuthi/Danhsachsp/hienthi');
                     exit;
                 } elseif ($loaiTaiKhoan == "User") {
-                    header('Location: http://localhost/quanlysieuthi/Thongke');
+                    header('Location: /quanlysieuthi/Thongke');
                     exit;
                 } else {
-                    header('Location: http://localhost/quanlysieuthi/Danhsachsp');
+                    header('Location: /quanlysieuthi/Danhsachsp');
                     exit;
                 }
             } else {
                 echo "<script>alert('Tên tài khoản hoặc mật khẩu không đúng');</script>";
             }
+        } else {
+            echo "Dữ liệu không được gửi!";
         }
     }
+    
 }
 ?>

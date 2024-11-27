@@ -11,11 +11,14 @@
   <div class="top"></div>
   <div class="bottom"></div>
   <div class="center">
-    <h2>Please Sign In</h2>
-    <?php 
-    include_once './MVC/Views/Pages/'.$data['page'].'.php';
-    ?>
-    <h2>&nbsp;</h2>
+  <form method="POST" action="http://localhost/congnghephanmem/Home/handleLogin">
+        <h3>Please Sign In</h3>
+        <?php 
+            include_once './MVC/Views/Pages/'.$data['page'].'.php';
+         ?>
+        <h2>&nbsp;</h2>
+    </form>
+    
   </div>
 </div>
 

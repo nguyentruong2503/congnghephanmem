@@ -67,15 +67,11 @@ else
 ?> -->
 
  <div>
- <form action="http://localhost/congnghephanmem/Home" method="POST">
-        <label for="username">Tên Đăng Nhập</label>
-        <input type="text" placeholder="Email or Phone" id="username" name="txtName">
-
-        <label for="password">Mật Khẩu</label>
-        <input type="password" placeholder="Password" id="password" name="txtPasswd">
-
-        <button name="txtLogin">Đăng Nhập</button>
-    </form>
+ <form method="POST" action="http://localhost/congnghephanmem/Home/handleLogin">
+  <input type="text" name="txtName" placeholder="Tên đăng nhập">
+  <input type="password" name="txtPasswd" placeholder="Mật khẩu">
+  <button type="submit" name="txtLogin">Đăng nhập</button>
+</form>
  </div>
   
 

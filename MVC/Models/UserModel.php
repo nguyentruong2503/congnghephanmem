@@ -12,8 +12,10 @@ class UserModel extends connectDB {
     // }
 
     public function checkUser($username, $password) {
-        $sql = "SELECT * FROM tkk WHERE Tentaikhoan = ? AND Matkhau = ?";
+        $sql = "SELECT * FROM tkk WHERE Tentaikhoan = '$username' AND Matkhau = '$password'";
         return mysqli_query($this->con, $sql);
     }
+
+ 
 }
 ?>
