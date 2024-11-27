@@ -65,22 +65,9 @@ else
 
 
 ?> -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Đăng Nhập</title>
-    <link rel="stylesheet" href="http://localhost/quanlysieuthi/Public/css/NVP/Form.css" />
-</head>
-<body>
-    <div class="background">
-        <div class="shape"></div>
-        <div class="shape"></div>
-    </div>
-    <form action="" method="POST">
-        <h3>Đăng Nhập</h3>
 
+ <div>
+ <form action="http://localhost/congnghephanmem/Home" method="POST">
         <label for="username">Tên Đăng Nhập</label>
         <input type="text" placeholder="Email or Phone" id="username" name="txtName">
 
@@ -89,7 +76,8 @@ else
 
         <button name="txtLogin">Đăng Nhập</button>
     </form>
-</body>
-</html>
+ </div>
+  
+
 
 

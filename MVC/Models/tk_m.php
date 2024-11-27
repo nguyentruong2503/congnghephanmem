@@ -22,7 +22,7 @@
         }
 
         function tk_update ($tentk, $mk, $loaitk){
-            $sql= "UPDATE tkk SET `Matkhau`='$mk',`Loaitaikhoan`='$loaitk' WHERE `Tentaikhoan`='$tentk' ";
+            $sql= "UPDATE tkk SET  Matkhau ='$mk',Loaitaikhoan='$loaitk' WHERE Tentaikhoan='$tentk' ";
             return mysqli_query($this->con,$sql);
         }
 
