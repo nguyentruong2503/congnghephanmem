@@ -35,10 +35,10 @@ class Home extends controller {
                 session_start();
                 $user = $result->fetch_assoc();
                 $_SESSION['Tentaikhoan'] = $user['Tentaikhoan'];
-    
+                $_SESSION['Loaitaikhoan'] = $user['Loaitaikhoan'];
                 $loaiTaiKhoan = $user['Loaitaikhoan'];
     
-                if ($loaiTaiKhoan == "Phongban") {
+                if ($loaiTaiKhoan == "Department") {
                     header('Location: /quanlysieuthi/Danhsachsp/hienthi');
                     exit;
                 } elseif ($loaiTaiKhoan == "User") {

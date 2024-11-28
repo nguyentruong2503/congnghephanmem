@@ -3,14 +3,18 @@
     <span class="fa-solid fa-book" >Thêm mới</span>
 </button>
 <hr>
-<form method="post" action="http://localhost/congnghephanmem/Danhsachtk" style= "max-width: 60rem; margin-inline: auto;">
+<form method="post" action="http://localhost/congnghephanmem/Danhsachtk/timkiem" style= "max-width: 60rem; margin-inline: auto;">
     <div class="form-inline">
-      <label style="width:150px;">Mã Người Dùng</label>
-      <input style="width:240px;" type="text" class="form-control" name="txtManguoidung" 
-      value="<?php if(isset($data['Tentaikhoan'])) echo $data['Tentaikhoan'] ?>">
       <label style="width:150px;">Tên Tài Khoản</label>
       <input style="width:240px;" type="text" class="form-control" name="txtTentk" 
-      value="<?php if(isset($data['Matkhau'])) echo $data['Matkhau'] ?>">
+      value="<?php if(isset($data['Loaitaikhoan'])) echo $data['Loaitaikhoan'] ?>">
+      <label style="width:150px;">Loại Tài Khoản</label>
+      <select style = "width: 180px" type="text" name="txtLoaitk" class="dd1">
+                    <option value="">-Chọn Loại Tài Khoản-</option>
+                    <option value="<?php  echo 'User' ?>">Sinh Viên</option>
+                    <option value="<?php  echo 'Department' ?>">Phòng Ban</option>
+                    <option value="<?php  echo 'Admin' ?>">Admin</option>
+                   </select>
       <button type="submit" class="btn btn-primary" name="btnTimkiem">Tìm kiếm</button>
       <button type="submit" class="btn btn-primary" name="btnExcel" style="margin-left: 10px">Xuất</button> 
    </div>
@@ -92,7 +96,7 @@
                    <select style = "width: 280px" type="text" name="txtLoaitk" class="dd1">
                     <option value="">----Chọn Loại Tài Khoản----</option>
                     <option value="<?php  echo 'User' ?>">Sinh Viên</option>
-                    <option value="<?php  echo 'Phongban' ?>">Phòng Ban</option>
+                    <option value="<?php  echo 'Department' ?>">Phòng Ban</option>
                     <option value="<?php  echo 'Admin' ?>">Admin</option>
                    </select>
                 </td>

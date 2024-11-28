@@ -47,28 +47,34 @@
     </style>
 </head>
 <body>
-    <div class="form-container">
-        <form method="post" action="http://localhost/congnghephanmem/Danhsachtk/sua" style="background-image: url('http://localhost/congnghephanmem/Public/picture/logo.jpg'); background-size: cover; padding: 20px; border-radius: 10px; height : 1000px">
-            <div class="form-group">
-                <?php 
-                if(isset($data['dulieu']) && mysqli_num_rows($data['dulieu']) > 0){
-                    while($row = mysqli_fetch_array($data['dulieu'])){
-                ?>
-                <label>Tên Tài Khoản</label>
-                <input type="text" class="form-control dd2" name="txtTentk" value="<?php echo $row['Tentaikhoan'] ?>">
-                <label>Mật Khẩu</label>
-                <input type="text" class="form-control dd2" name="txtMk" value="<?php echo $row['Matkhau'] ?>">
-                <label>Loại Tài Khoản</label>
-                <input type="text" class="form-control dd2" name="txtLoaitk" value="<?php echo $row['Loaitaikhoan'] ?>">
-                <?php        
-                    }
-                }
-                ?>
-                <br>
-                <button style = "text-align: center" type="submit" class="btn btn-dark" name="btnSave">Lưu</button>
-            </div>
-        </form>
+<div class="form-container">
+<form method="post" action="http://localhost/congnghephanmem/Danhsachtk/suadl">
+    <div class="form-group">
+        <?php 
+        if (isset($data['dulieu']) && mysqli_num_rows($data['dulieu']) > 0) {
+            while ($row = mysqli_fetch_array($data['dulieu'])) {
+        ?>
+        <label>Tên Tài Khoản</label>
+        <input type="text" class="form-control dd2" name="txtTentk" value="<?php echo $row['Tentaikhoan'] ?> " readonly>
+        <label>Mật Khẩu</label>
+        <input type="text" class="form-control dd2" name="txtMk" value="<?php echo $row['Matkhau'] ?>">
+        <label>Loại Tài Khoản</label>
+        <select type="text" name="txtLoaitk" class="dd1">
+                    <option value="">----Chọn Loại Tài Khoản----</option>
+                    <option value="<?php  echo 'User' ?>">Sinh Viên</option>
+                    <option value="<?php  echo 'Department' ?>">Phòng Ban</option>
+                    <option value="<?php  echo 'Admin' ?>">Admin</option>
+        </select>
+        <?php        
+            }
+        }
+        ?>
+        <br>
+        <button style="text-align: center" type="submit" class="btn btn-dark" name="btnSave">Lưu</button>
     </div>
+</form>
+
+</div>
     
 </body>
 </html>

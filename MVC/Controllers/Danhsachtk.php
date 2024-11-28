@@ -50,9 +50,7 @@ class Danhsachtk extends controller{
         
     }
 }
-//end
-//timkiem
-   
+
     function xoa($tentk){
 
         $kq=$this->ds->tk_delete($tentk);
@@ -70,44 +68,74 @@ class Danhsachtk extends controller{
     }
     
     //sua
-    function sua($manguoidung){
-        $this->view('Masterlayout',[
-            'page'=>'Danhsachtk_sua_v',
-            'dulieu'=>$this->ds->tk_findsua($manguoidung)
-        ]); 
+    function sua($tentk = null) {
+        if ($tentk === null) {
+            echo '<script>alert("Thiếu thông tin tài khoản cần sửa!");
+            window.location.href = "http://localhost/congnghephanmem/Danhsachtk";</script>';
+            exit;
+        }
+    
+        $this->view('Masterlayout', [
+            'page' => 'Danhsachtk_sua_v',
+            'dulieu' => $this->ds->tk_findsua($tentk),
+        ]);
     }
-    //end sua
+    
     //thaotac sua
-    function suadl(){
-        if(isset($_POST['btnSave'])){
-            $tentk=$_POST['txtTentk'];
-            $mk=$_POST['txtMk'];
-            $loaitk=$_POST['txtLoaitk'];
-            //Kiểm tra thiếu dữ liệu
-            if($tentk =='' ||$mk =='' || $loaitk == ''){
+    function suadl() {
+        if (isset($_POST['btnSave'])) {
+            $tentk = $_POST['txtTentk'];
+            $mk = $_POST['txtMk'];
+            $loaitk = $_POST['txtLoaitk'];
+    
+            if ($tentk == '' || $mk == '' || $loaitk == '') {
                 echo '<script>alert("Thiếu dữ liệu!");
-                window.location.href = "http://localhost/congnghephanmem/Danhsachtk";</script>';
+                window.location.href = "http://localhost/congnghephanmem/Danhsachtk/sua/' . $tentk . '";</script>';
+                exit;
             }
-            else{
-                $kq=$this->ds->tk_update($tentk,$mk,$loaitk);
-                if($kq)
-                    echo '<script>alert("Sửa thành công!");
-                    window.location.href = "http://localhost/congnghephanmem/Danhsachtk";</script>';
-            
-            }   
-            //gọi lại giao diện
-            $this->view('Masterlayout',[
-                'page'=>'Danhsachtk_v',
-                'dulieu'=>$this->ds->tk_find('','')
+    
+            $kq = $this->ds->tk_update($tentk, $mk, $loaitk);
+            if ($kq) {
+                echo '<script>alert("Sửa thành công!");
+                window.location.href = "http://localhost/congnghephanmem/Danhsachtk";</script>';
+                exit;
+            }
+    
+            // Hiển thị lại form với dữ liệu cũ nếu không thành công
+            $this->view('Masterlayout', [
+                'page' => 'Danhsachtk_sua_v',
+                'dulieu' => $this->ds->tk_findsua($tentk),
             ]);
         }
     }
-        
-    }
-    //end xuat + tk
-    //xoa
-    
-    // //end thao tac sua
-    // }
+   
 
+    function timkiem(){
+        if(isset($_POST['btnTimkiem'])){
+            $tentk=$_POST['txtTentk'];
+            $loaitk=$_POST['txtLoaitk'];
+            if($loaitk == '' && $tentk == ''){
+                echo '<script>alert("Vui lòng nhập dữ liệu");
+                    window.location.href = "http://localhost/congnghephanmem/Danhsachtk";</script>';
+            }
+            else{
+                $dl=$this->ds->timkiem($tentk,$loaitk);
+                $dl1=$this->ds->tennv();
+                //Gọi lại giao diện và truyền $dl ra
+                $this->view('Masterlayout',[
+                'page'=>'Danhsachtk_v',
+                'dulieu'=>$dl,
+                'dulieu1'=>$dl1,
+                'loaitk'=>$loaitk,
+                'tentk'=>$tentk
+            ]);
+            }  
+        }
+    }
+    
+
+
+
+}
+    
 ?>
