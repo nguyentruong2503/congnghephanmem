@@ -57,3 +57,24 @@
     font-size: 1rem;
     color: #333;
 }
+/* other file */
+.form-inline {
+    display: flex;
+    align-items: center; /* Căn chỉnh các phần tử dọc theo trục ngang */
+    flex-wrap: wrap;    /* Đảm bảo không tràn xuống dòng */
+    gap: 10px;          /* Khoảng cách giữa các phần tử */
+}
+
+.form-inline input{
+    margin-right: 10px;
+    margin-left: -10px;
+}
+
+.form-inline label {
+    margin-right: -30px;
+    margin-left: 10px;
+}
+
+button {
+    margin: 0 5px;      /* Khoảng cách giữa các nút */
+}

@@ -1,4 +1,3 @@
-
 <button type="button" class="btn btn-success" onclick="openModal()" data-toggle="modalx" data-target="#myModal" style="margin-top: 30px; margin-left: 30px;">
     <span class="fa-solid fa-book" >Thêm mới</span>
 </button>
@@ -10,18 +9,15 @@
       value="<?php if(isset($data['Loaitaikhoan'])) echo $data['Loaitaikhoan'] ?>">
       <label style="width:150px;">Loại Tài Khoản</label>
       <select style = "width: 180px" type="text" name="txtLoaitk" class="dd1">
-                    <option value="">-Chọn Loại Tài Khoản-</option>
+                    <option value="">---Tất Cả Tài Khoản---  </option>
                     <option value="<?php  echo 'User' ?>">Sinh Viên</option>
                     <option value="<?php  echo 'Department' ?>">Phòng Ban</option>
                     <option value="<?php  echo 'Admin' ?>">Admin</option>
                    </select>
       <button type="submit" class="btn btn-primary" name="btnTimkiem">Tìm kiếm</button>
-      <button type="submit" class="btn btn-primary" name="btnExcel" style="margin-left: 10px">Xuất</button> 
    </div>
    <br>
-   <div style=" width: 100%;
-        height: 661px;
-        overflow-y: auto;">
+   <div table-responsive>
    <table class="table table-striped">
         <thead>
             <tr>
@@ -80,20 +76,20 @@
               <tr>
                 <td>Tên Tài Khoản:</td>
                 <td>
-                  <input style = "width: 280px" type="text" name="txtTentk" class="dd1" value="<?php if(isset($data['Tentaikhoan'])) echo $data['Tentaikhoan'] ?>" />
+                  <input style = "width: 280px" type="text" name="txtTentk"  value="<?php if(isset($data['Tentaikhoan'])) echo $data['Tentaikhoan'] ?>" />
                 </td>
               </tr>
               
               <tr>
                 <td>Mật Khẩu:</td>
                 <td>
-                  <input style = "width: 280px" type="number" name="txtMk" class="dd1" value="<?php if(isset($data['Matkhau'])) echo $data['Matkhau'] ?>" />
+                  <input style = "width: 280px" type="number" name="txtMk"  value="<?php if(isset($data['Matkhau'])) echo $data['Matkhau'] ?>" />
                 </td>
               </tr>
               <tr>
                 <td>Loại Tài Khoản:</td>
                 <td>
-                   <select style = "width: 280px" type="text" name="txtLoaitk" class="dd1">
+                   <select style = "width: 280px" type="text" name="txtLoaitk" >
                     <option value="">----Chọn Loại Tài Khoản----</option>
                     <option value="<?php  echo 'User' ?>">Sinh Viên</option>
                     <option value="<?php  echo 'Department' ?>">Phòng Ban</option>

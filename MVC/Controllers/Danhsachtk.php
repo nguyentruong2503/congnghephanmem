@@ -114,11 +114,7 @@ class Danhsachtk extends controller{
         if(isset($_POST['btnTimkiem'])){
             $tentk=$_POST['txtTentk'];
             $loaitk=$_POST['txtLoaitk'];
-            if($loaitk == '' && $tentk == ''){
-                echo '<script>alert("Vui lòng nhập dữ liệu");
-                    window.location.href = "http://localhost/congnghephanmem/Danhsachtk";</script>';
-            }
-            else{
+           
                 $dl=$this->ds->timkiem($tentk,$loaitk);
                 $dl1=$this->ds->tennv();
                 //Gọi lại giao diện và truyền $dl ra
@@ -129,7 +125,7 @@ class Danhsachtk extends controller{
                 'loaitk'=>$loaitk,
                 'tentk'=>$tentk
             ]);
-            }  
+             
         }
     }
     
