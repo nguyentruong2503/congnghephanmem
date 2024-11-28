@@ -52,33 +52,9 @@ class Danhsachtk extends controller{
 }
 //end
 //timkiem
-    // function timkiem(){
-    //     if(isset($_POST['btnTimkiem'])){
-    //         $manguoidung=$_POST['txtManguoidung'];
-    //         $tentk=$_POST['txtTentk'];
-    //         if($manguoidung == '' && $tentk == ''){
-    //             echo '<script>alert("Vui lòng nhập dữ liệu");
-    //                 window.location.href = "http://localhost/quanlysieuthi/Danhsachtk";</script>';
-    //         }
-    //         else{
-    //             $dl=$this->ds->tk_find($manguoidung,$tentk);
-    //             $dl1=$this->ds->tennv();
-    //             //Gọi lại giao diện và truyền $dl ra
-    //             $this->view('Masterlayout',[
-    //             'page'=>'Danhsachtk_v',
-    //             'dulieu'=>$dl,
-    //             'dulieu1'=>$dl1,
-    //             'manguoidung'=>$manguoidung,
-    //             'tentk'=>$tentk
-    //         ]);
-    //         }  
-    //     }
-
-        
-    }
-    //end xuat + tk
-    //xoa
+   
     function xoa($tentk){
+
         $kq=$this->ds->tk_delete($tentk);
         if($kq){
             echo '<script>alert("Xóa thành công!")</script>';
@@ -126,6 +102,11 @@ class Danhsachtk extends controller{
             ]);
         }
     }
+        
+    }
+    //end xuat + tk
+    //xoa
+    
     // //end thao tac sua
     // }
 
