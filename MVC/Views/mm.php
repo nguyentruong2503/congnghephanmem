@@ -11,7 +11,7 @@
   <div class="top"></div>
   <div class="bottom"></div>
   <div class="center">
-  <form method="POST" action="http://localhost/congnghephanmem/Home/handleLogin">
+  <form method="POST" action="http://localhost/congnghephanmem/Home/Login">
         <h3>Please Sign In</h3>
         <?php 
             include_once './MVC/Views/Pages/'.$data['page'].'.php';
