@@ -130,8 +130,8 @@
                            <td id="ten"><?php echo $row['TenChungChi'] ?></td>
                            
                            <td class="c gt"><?php echo $row['LoaiChungChi'] ?></td>
-                           <td class="c sdt"><?php echo $row['TenSinhVien'] ?></td>
-                           <td  class="c dc"><?php echo $row['MaSinhVien'] ?></td>
+                           <td class="c sdt"><?php echo $row['MaSinhVien'] ?></td>
+                           <td  class="c dc"><?php echo $row['TenSinhVien'] ?></td>
                            <td class="c ns">
                                <?php 
                                     $d =$row['NgayCapChungChi'];
