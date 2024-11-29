@@ -1,6 +1,6 @@
 <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css'>
 <script src='https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js'></script>
-<link rel='stylesheet' href='http://localhost/OJSinhvien/congnghephanmem/Public/css/CDT/styleinf.css'>
+<link rel='stylesheet' href='http://localhost/congnghephanmem/Public/css/CDT/styleinf.css'>
 
 <?php 
             if(isset($data['dulieu'])&& mysqli_num_rows($data['dulieu'])==1){

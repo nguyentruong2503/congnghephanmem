@@ -19,12 +19,12 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
       <i class="fa fa-remove"></i>
     </a>
-    <img src="http://localhost/OJSinhvien/congnghephanmem/Public/picture/utt.png" style="width:45%;" class="w3-round"><br><br>
+    <img src="http://localhost/congnghephanmem/Public/picture/utt.png" style="width:45%;" class="w3-round"><br><br>
     <h4><b>Quản lý</b></h4>
   </div>
   <div class="w3-bar-block">
-    <a href="http://localhost/OJSinhvien/congnghephanmem/Profile" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Thông tin cá nhân</a> 
-    <a href="http://localhost/OJSinhvien/congnghephanmem/Tracuu" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>Tra cứu </a>
+    <a href="http://localhost/congnghephanmem/Profile" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Thông tin cá nhân</a> 
+    <a href="http://localhost/congnghephanmem/Tracuu" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>Tra cứu </a>
     <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>Nộp chứng chỉ</a> 
 
   </div>
