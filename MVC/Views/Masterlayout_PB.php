@@ -33,10 +33,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
        class="w3-bar-item w3-button w3-padding">
         <i class="fa fa-envelope fa-fw w3-margin-right"></i>QUẢN LÝ CHỨNG CHỈ
     </a>
-    <a href="http://localhost/congnghephanmem/PB_QL_SV" 
+    <a href="http://localhost/congnghephanmem/PB" 
        onclick="setActiveLink(this)" 
        class="w3-bar-item w3-button w3-padding ">
-        <i class="fa fa-user fa-fw w3-margin-right"></i>QUẢN LÝ SINH VIÊN
+        <i class="fa fa-user fa-fw w3-margin-right"></i>QUẢN LÝ PHÒNG BAN
     </a>
 </div>
 
