@@ -146,11 +146,6 @@
                     }
                 }
         
-                // Gọi lại giao diện
-                $this->view('Masterlayout', [
-                    'page' => 'Bangtotnghiep_v',
-                    'dulieu' => $this->degree->bangtotnghiep_find2('')
-                ]);
             }
         }
 

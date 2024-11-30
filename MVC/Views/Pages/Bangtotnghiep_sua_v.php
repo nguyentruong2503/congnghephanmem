@@ -76,7 +76,6 @@
                     <select class="form-control dd2" name="ddlLoaibang">
                         <option value="">---Chọn loại bằng---</option>
                         <?php
-                            // Các loại bằng được định nghĩa trước
                             $loaiBang = ['Cử nhân', 'Kỹ sư', 'Thạc sĩ'];
                             foreach ($loaiBang as $lb) {
                             $selected = $lb == $row['LoaiBang'] ? 'selected' : '';
