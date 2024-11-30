@@ -6,6 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello</h1>
+    <h1><b>XIN CHÀO!</b></h1>
 </body>
 </html>
