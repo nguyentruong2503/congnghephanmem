@@ -6,7 +6,7 @@
 
         }
          function Get_data(){
-          $this->view("Masterlayout",["page"=>"Tracuu","get"=>-1]);
+          $this->view("Masterlayout_SV",["page"=>"Tracuu","get"=>-1]);
         }
        
         function timkiem(){ 
@@ -17,12 +17,12 @@
                 $loai=$_POST['cb'];
                 if(empty($mt1)||empty($mt)|| empty($loai)){
                     echo '<script>alert("Hãy nhập đầy đủ thông tin")</script>';
-                    $this->view("Masterlayout",["page"=>"Tracuu","mt"=>$mt,"mt1"=>$mt1,"cb"=>$loai,"get"=>-1]);
+                    $this->view("Masterlayout_SV",["page"=>"Tracuu","mt"=>$mt,"mt1"=>$mt1,"cb"=>$loai,"get"=>-1]);
 
                 }
 
                 $dl=$this->goi->tracuuchungchi($mt1,$mt,$loai);
-              $this->view("Masterlayout",["page"=>"Tracuu","dulieu"=>$dl,"mt"=>$mt,"mt1"=>$mt1,"cb"=>$loai]);
+              $this->view("Masterlayout_SV",["page"=>"Tracuu","dulieu"=>$dl,"mt"=>$mt,"mt1"=>$mt1,"cb"=>$loai]);
 
             }
           
