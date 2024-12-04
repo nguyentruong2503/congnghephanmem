@@ -83,7 +83,7 @@
                     </div>
                     <div class="col-sm-9 text-secondary">
                       
-                    <?php echo $row['MaKhoa'] ?>
+                    <?php echo $row['TenKhoa'] ?>
 
                     </div>
                   </div>

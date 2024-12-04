@@ -15,7 +15,7 @@
            return mysqli_query($this->con,$sql);
         }
         function timkiem($m){
-            $sql="SELECT * From sinhvien WHERE MaSinhVien ='$m'";                     
+            $sql="SELECT sinhvien.*,khoa.TenKhoa FROM `sinhvien`join `khoa` on sinhvien.MaKhoa=khoa.MaKhoa WHERE  MaSinhVien ='$m'";                     
            return mysqli_query($this->con,$sql);
         }  
         function insertcc($macc, $tencc, $loaicc, $tensv, $masv, $ngaycapcc, $trangthai) {
