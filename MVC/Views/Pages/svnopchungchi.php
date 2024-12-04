@@ -86,10 +86,10 @@
        
             <div class="form-group">
                 <label for="txtmacc">Mã chứng chỉ</label>
-                <input type="text" class="form-control dd2" name="txtmacc" id="txtmacc" placeholder="Nhập mã chứng chỉ" required value=<?php isset($data["macc"] ) && !empty( $data["macc"])){echo $data["macc"];}?> >
+                <input type="text" class="form-control dd2" name="txtmacc" id="txtmacc" placeholder="Nhập mã chứng chỉ" required value="<?php if(isset($data["macc"] ) && !empty( $data["macc"])){echo $data["macc"];}?>" >
 
                 <label for="txttencc">Tên chứng chỉ</label>
-                <input type="text" class="form-control dd2" name="txttencc" id="txttencc" placeholder="Nhập tên chứng chỉ" required <?php if(isset($data["tencc"] ) && !empty( $data["tencc"])){echo 'value='.$data["tencc"];}?>>
+                <input type="text" class="form-control dd2" name="txttencc" id="txttencc" placeholder="Nhập tên chứng chỉ" required  value="<?php if(isset($data["tencc"] ) && !empty( $data["tencc"])){echo $data["tencc"];}?>">
 
                 <label for="slloaicc">Loại chứng chỉ</label>
                 <select name="slloaicc" class="form-control dd2" id="slloaicc">
@@ -98,13 +98,13 @@
                 </select>
 
                 <label for="txttensv">Tên sinh viên</label>
-                <input type="text" class="form-control dd2" name="txttensv" id="txttensv" placeholder="Nhập tên sinh viên" required <?php if(isset($data["tensv"] ) && !empty( $data["tensv"])){echo 'value='.$data["tensv"];}?> >
+                <input type="text" class="form-control dd2" name="txttensv" id="txttensv" placeholder="Nhập tên sinh viên" required value="<?php if(isset($data["tensv"] ) && !empty( $data["tensv"])){echo $data["tensv"];}?>" >
 
                 <label for="txtmasv">Mã sinh viên</label>
-                <input type="text" class="form-control dd2" name="txtmasv" id="txtmasv" placeholder="Nhập mã sinh viên" required <?php if(isset($data["tensv"] ) && !empty( $data["masv"])){echo 'value='.$data["masv"];}?> >
+                <input type="text" class="form-control dd2" name="txtmasv" id="txtmasv" placeholder="Nhập mã sinh viên" required value="<?php if(isset($data["tensv"] ) && !empty( $data["masv"])){echo $data["masv"];}?>" >
 
                 <label for="txtngaycapcc">Ngày cấp chứng chỉ</label>
-                <input type="date" class="form-control dd2" name="txtngaycapcc" id="txtngaycapcc" required <?php if(isset($data["ngaycapcc"] ) && !empty( $data["ngaycapcc"])){echo 'value='.$data["ngaycapcc"];}?> >
+                <input type="date" class="form-control dd2" name="txtngaycapcc" id="txtngaycapcc" required value="<?php if(isset($data["ngaycapcc"] ) && !empty( $data["ngaycapcc"])){echo $data["ngaycapcc"];}?>" >
             </div>
 
             <div class="form-actions">
