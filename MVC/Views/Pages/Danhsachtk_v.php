@@ -1,22 +1,35 @@
-<button type="button" class="btn btn-success" onclick="openModal()" data-toggle="modalx" data-target="#myModal" style="margin-top: 30px; margin-left: 30px;">
-    <span class="fa-solid fa-book" >Thêm mới</span>
-</button>
-<hr>
-<form method="post" action="http://localhost/congnghephanmem/Danhsachtk/timkiem" style= "max-width: 60rem; margin-inline: auto;">
-    <div class="form-inline">
-      <label style="width:150px;">Tên Tài Khoản</label>
-      <input style="width:240px;" type="text" class="form-control" name="txtTentk" 
-      value="<?php if(isset($data['Loaitaikhoan'])) echo $data['Loaitaikhoan'] ?>">
-      <label style="width:150px;">Loại Tài Khoản</label>
-      <select style = "width: 180px" type="text" name="txtLoaitk" class="dd1">
-                    <option value="">---Tất Cả Tài Khoản---  </option>
+<header id="portfolio">
+    <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+    <div class="w3-container">
+    <h1><b>Quản Lý Tài Khoản</b></h1>
+    <div class="w3-section w3-bottombar w3-padding-16">
+      <span class="w3-margin-right" style="width:150px; margin-right: 100px;">Filter:</span> 
+      <button class="w3-button w3-black">ALL</button>
+
+      <button type="button" class="w3-button w3-white" onclick="openModal()" data-toggle="modalx" data-target="#myModal" ><i class="fa fa-diamond w3-margin-right"></i>Thêm Mới</button>
+
+      <div>
+      <form action="http://localhost/congnghephanmem/Danhsachtk/timkiem" method="post">
+        <div class="form-inline">
+        <label style="width:150px; margin-left: 0px;">Tên Tài Khoản</label>
+        <input style="width:240px;" type="text" class="form-control" name="txtTentk" value="<?php if(isset($data['Loaitaikhoan'])) echo $data['Loaitaikhoan'] ?>">
+        <label style="width:150px;">Loại Tài Khoản</label>
+        <select style = "width: 200px" type="text" name="txtLoaitk" class="w3-button w3-white">
+                    <option value="">--Tất Cả Tài Khoản-- </option>
                     <option value="<?php  echo 'User' ?>">Sinh Viên</option>
                     <option value="<?php  echo 'Department' ?>">Phòng Ban</option>
                     <option value="<?php  echo 'Admin' ?>">Admin</option>
                    </select>
-      <button type="submit" class="btn btn-primary" name="btnTimkiem">Tìm kiếm</button>
-   </div>
-   <br>
+        <button type="submit" class="w3-button w3-white" name="btnTimkiem">Tìm kiếm</button>
+      </div>
+      </form>
+      </div>
+    </div>
+    </div>
+</header>
+<hr>
+<form method="post" action="http://localhost/congnghephanmem/Danhsachtk/timkiem" style= "max-width: 70rem; margin-inline: auto;">
    <div table-responsive>
    <table class="table table-striped">
         <thead>
@@ -28,7 +41,7 @@
                 
                 <th>Loại Tài Khoản</th>
 
-                <th></th>
+                <th>Chức Năng</th>
             </tr>
         </thead>
         <tbody>

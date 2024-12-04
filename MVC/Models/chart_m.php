@@ -1,11 +1,25 @@
 <?php
-class chart_m {
+class chart_m extends connectDB {
     public function getChartData() {
-        // Dữ liệu mẫu (có thể lấy từ cơ sở dữ liệu)
-        return [
-            "labels" => ["Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5"],
-            "data" => [10, 20, 15, 25, 30]
+
+        $sql = "SELECT month, value FROM sales ORDER BY month ASC";
+        $result = mysqli_query($this->con, $sql);
+
+       
+        $data = [
+            "labels" => [],
+            "data" => []
         ];
+
+        if ($result->num_rows > 0) {
+            
+            while ($row = $result->fetch_assoc()) {
+                $data["labels"][] = $row["month"];
+                $data["data"][] = $row["value"];
+            }
+        }
+        
+        return $data;
     }
 }
 ?>

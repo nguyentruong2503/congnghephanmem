@@ -49,15 +49,18 @@
 
     </script>
     <script>
-        const labels1 = <?php echo json_encode($data['labels']); ?>;
-        const data1 = <?php echo json_encode($data['data']); ?>;
-        drawPieChart('chart1', labels1, data1);
+  
+    const dataFromPHP = <?php echo json_encode($data['dulieu']); ?>;
 
-        
-        const labels = <?php echo json_encode($data['labels']); ?>;
-        const data = <?php echo json_encode($data['data']); ?>;
-        drawPieChart('chart2', labels, data);
-    </script>
+    const labels1 = dataFromPHP.labels;
+    const data1 = dataFromPHP.data  
+    drawPieChart('chart1', labels1, data1);
+    
+    const labels2 = dataFromPHP.labels;
+    const data2 = dataFromPHP.data;
+    drawPieChart('chart2', labels2, data2);
+</script>
+
 
 </body>
 </html>

@@ -12,7 +12,7 @@
   <div class="bottom"></div>
   <div class="center">
   <form method="POST" action="http://localhost/congnghephanmem/Home/Login">
-        <h3>Please Sign In</h3>
+        <h3>Đăng Nhập Tài Khoản</h3>
         <?php 
             include_once './MVC/Views/Pages/'.$data['page'].'.php';
          ?>

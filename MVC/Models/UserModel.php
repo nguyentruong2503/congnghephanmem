@@ -5,7 +5,5 @@ class UserModel extends connectDB {
         $sql = "SELECT * FROM taikhoan WHERE Tentaikhoan = '$username' AND Matkhau = '$password'";
         return mysqli_query($this->con, $sql);
     }
-
- 
 }
 ?>
