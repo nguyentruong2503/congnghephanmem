@@ -43,7 +43,7 @@ class Home extends controller {
                         header('Location: /congnghephanmem/Bangtotnghiep/hienthi');
                         exit;
                     } elseif ($loaiTaiKhoan == "User") {
-                        header('Location: /congnghephanmem/');
+                        header('Location: /congnghephanmem/Profile');
                         exit;
                     } else {
                         header('Location: /congnghephanmem/Danhsachtk');
