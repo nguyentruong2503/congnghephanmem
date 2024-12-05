@@ -7,7 +7,7 @@ class Danhsachtk extends controller{
     }
 
     function Get_data(){
-        $this->view('Masterlayout',[
+        $this->view('Masterlayout_admin',[
             'page'=>'Danhsachtk_v',
             'dulieu'=>$this->ds->tk_find('',''),
             'dulieutennv'=>$this->ds->tennv()
@@ -41,7 +41,7 @@ class Danhsachtk extends controller{
                             window.location.href = "http://localhost/congnghephanmem/Danhsachtk";</script>';
                 }
             //gọi lại giao diện
-            $this->view('Masterlayout',[
+            $this->view('Masterlayout_admin',[
                 'page'=>'Danhsachtk_v',
                 'dulieu'=>$this->ds->tk_find('',''),
                 'dulieutennv'=>$this->ds->tennv()
@@ -61,7 +61,7 @@ class Danhsachtk extends controller{
             echo '<script>alert("Xóa thất bại!")</script>';
         }
         //Gọi lại giao diện
-        $this->view('Masterlayout',[
+        $this->view('Masterlayout_admin',[
             'page'=>'Danhsachtk_v',
             'dulieu'=>$this->ds->tk_find('','')
         ]);
@@ -75,7 +75,7 @@ class Danhsachtk extends controller{
             exit;
         }
     
-        $this->view('Masterlayout', [
+        $this->view('Masterlayout_admin', [
             'page' => 'Danhsachtk_sua_v',
             'dulieu' => $this->ds->tk_findsua($tentk),
         ]);
@@ -102,7 +102,7 @@ class Danhsachtk extends controller{
             }
     
             // Hiển thị lại form với dữ liệu cũ nếu không thành công
-            $this->view('Masterlayout', [
+            $this->view('Masterlayout_admin', [
                 'page' => 'Danhsachtk_sua_v',
                 'dulieu' => $this->ds->tk_findsua($tentk),
             ]);
@@ -118,7 +118,7 @@ class Danhsachtk extends controller{
                 $dl=$this->ds->timkiem($tentk,$loaitk);
                 $dl1=$this->ds->tennv();
                 //Gọi lại giao diện và truyền $dl ra
-                $this->view('Masterlayout',[
+                $this->view('Masterlayout_admin',[
                 'page'=>'Danhsachtk_v',
                 'dulieu'=>$dl,
                 'dulieu1'=>$dl1,

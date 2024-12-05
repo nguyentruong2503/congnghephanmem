@@ -11,7 +11,7 @@ class Thongke extends controller {
         $data = $this->chartModel->getChartData();
 
         // Truyền dữ liệu sang View
-        $this->view('Masterlayout', [
+        $this->view('Masterlayout_admin', [
             'page' => 'chart_view',
             'dulieu' => $data
         ]);
