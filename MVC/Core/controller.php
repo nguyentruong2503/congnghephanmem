@@ -5,15 +5,9 @@ class controller{
         return new $model;
     }
 
-    public function view($view, $data = [], $useLayout = true){
-        if ($useLayout) {
-            include_once './MVC/Views/Masterlayout.php';
-        }
-        
-        foreach ($data as $key => $value) {
-            $$key = $value;
-        }
-        include_once './MVC/Views/Pages/' . $view . '.php';
+    public function view($view, $data = []){
+        include_once './MVC/Views/'.$view.'.php';
+
     }
 }
 ?>

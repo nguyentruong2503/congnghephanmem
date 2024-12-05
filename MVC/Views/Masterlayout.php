@@ -28,10 +28,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <h4><b>Quản lý</b></h4>
   </div>
   <div class="w3-bar-block">
-    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>QUẢN LÝ BẰNG TỐT NGHIỆP</a> 
+    <a href="http://localhost/congnghephanmem/Bangtotnghiep" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>QUẢN LÝ BẰNG TỐT NGHIỆP</a> 
    
     <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>QUẢN LÝ SINH VIÊN</a> 
-     <a href="http://localhost/congnghephanmem/yeucau_chungchi/Get_data" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Yêu cầu chứng chỉ</a>
     <a href="http://localhost/congnghephanmem/dschungchi/Get_data" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Danh sách yêu cầu</a> 
     <a href="http://localhost/congnghephanmem/dschungchidaduyet/Get_data" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Danh sách chứng chỉ đã duyệt</a> 
     <a href="http://localhost/congnghephanmem/chungchi_gvs/Get_data" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Giáo viên thêm chứng chỉ</a>   

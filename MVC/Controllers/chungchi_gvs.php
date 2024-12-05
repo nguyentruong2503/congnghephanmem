@@ -6,7 +6,7 @@ class chungchi_gvs extends controller{
         $this->ds=$this->model('chungchi');
     }
     function Get_data(){
-        $this->view('chungchi_gv',[
+        $this->view('Masterlayout',[
             'page'=>'chungchi_gv',
             'dulieu'=>$this->ds->chungchi_find('','')
         ]);

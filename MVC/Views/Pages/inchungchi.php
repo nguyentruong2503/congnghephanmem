@@ -102,15 +102,15 @@
 <body>
     <div class="certificate-container">
   
-        <img src="http://localhost/congnghephanmem/Public/Pictures/gg.png" alt="Logo Trường" class="logo">
+        <img src="http://localhost/congnghephanmem/Public/picture/utt.png" alt="Logo Trường" class="logo">
 
         <div class="header">
             <h1>Trường Công Nghệ Giao Thông Vận Tải</h1>
             <h2>Chứng Chỉ Hoàn Thành Khóa Học</h2>
         </div>
 
-        <?php if (isset($chungchi) && !empty($chungchi)): ?>
-            <?php foreach ($chungchi as $item): ?>
+        <?php if (isset($data['chungchi']) && !empty($data['chungchi'])): ?>
+            <?php foreach ($data['chungchi'] as $item): ?>
                 <div class="content">
                     <p><strong>Mã Sinh Viên:</strong> <?php echo $item['MaSinhVien']; ?></p>
                     <p><strong>Tên Sinh Viên:</strong> <?php echo $item['TenSinhVien']; ?></p>

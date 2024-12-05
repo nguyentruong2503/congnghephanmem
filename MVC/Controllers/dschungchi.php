@@ -6,7 +6,7 @@ class dschungchi extends controller{
         $this->ds=$this->model('chungchi');
     }
     function Get_data(){
-        $this->view('dsyeucau_chungchi',[
+        $this->view('Masterlayout',[
             'page'=>'dsyeucau_chungchi',
             'dulieu'=>$this->ds->chungchi_find('','')
         ]);
