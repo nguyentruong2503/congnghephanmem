@@ -32,6 +32,13 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
                   </a>
                     
                 </li>
+                <li  class="w3-bar-item w3-button w3-padding">
+                  <a href="http://localhost/congnghephanmem/PB" style="text-decoration: none;">
+                  <i class="icon fa fa-user fa-fw w3-margin-right"></i>
+                  <span class="menu-text">Quản Lý Phòng Ban</span>
+                  </a>
+                    
+                </li>
                 <li class="w3-bar-item w3-button w3-padding">
                     <a href="http://localhost/congnghephanmem/Thongke" style="text-decoration: none;">
                     <i class="icon fa fa-th-large fa-fw w3-margin-right"></i>

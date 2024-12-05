@@ -6,7 +6,11 @@
 
         }
          function Get_data(){
-          $this->view("Masterlayout_SV",["page"=>"userdetails","dulieu"=>$this->goi->timkiem("SV001")]);
+
+
+          $this->view("Masterlayout_SV",["page"=>"userdetails","dulieu"=>$this->goi->timkiem($_SESSION['Tentaikhoan']
+
+          )]);
         }
        
         function timkiem(){ 

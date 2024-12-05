@@ -15,7 +15,7 @@
               <div class="card">
                 <div class="card-body">
                   <div class="d-flex flex-column align-items-center text-center" style=" margin-top:20px;">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
+                    <img src="http://localhost/congnghephanmem/Public/picture/avatar7.png"  class="rounded-circle" width="150">
                     <div class="mt-3">
                     <h5 class="text-secondary mb-1" style="color: black; margin-top:25px; font-size:20px;">Sinh Viên</h5>
                    

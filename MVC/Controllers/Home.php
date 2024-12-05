@@ -36,7 +36,7 @@ class Home extends controller {
                     $user = $result->fetch_assoc();
                     $_SESSION['Tentaikhoan'] = $user['Tentaikhoan'];
                     $_SESSION['Loaitaikhoan'] = $user['Loaitaikhoan'];
-                    $loaiTaiKhoan = $user['Loaitaikhoan'];
+                    $loaiTaiKhoan = $user['Loaitaikhoan'];   
     
                    
                     if ($loaiTaiKhoan == "Department") {
