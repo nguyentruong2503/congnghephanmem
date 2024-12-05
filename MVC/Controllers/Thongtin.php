@@ -16,64 +16,7 @@
               $this->view("Masterlayout",["page"=>"dstt","dulieu"=>$dl,"mt"=>$mt]);
 
             }
-            if(isset($_POST['btnxuat'])){
-            //code xuất excel
-            $objExcel=new PHPExcel();
-            $objExcel->setActiveSheetIndex(0);
-            $sheet=$objExcel->getActiveSheet()->setTitle('DSTT');
-            $rowCount=1;
-            //Tạo tiêu đề cho cột trong excel
-            $sheet->setCellValue('A'.$rowCount,'STT');
-            $sheet->setCellValue('B'.$rowCount,'Mã NV');
-            $sheet->setCellValue('C'.$rowCount,'Tên NV');
-            $sheet->setCellValue('D'.$rowCount,'Giới Tính');
-            $sheet->setCellValue('E'.$rowCount,'Ngày Sinh');
-            $sheet->setCellValue('F'.$rowCount,'Quê Quán');
-            $sheet->setCellValue('G'.$rowCount,'SĐT');
-        
-            //định dạng cột tiêu đề
-            $sheet->getColumnDimension('A')->setAutoSize(true);
-            $sheet->getColumnDimension('B')->setAutoSize(true);
-            $sheet->getColumnDimension('C')->setAutoSize(true);
-            //gán màu nền
-            $sheet->getStyle('A1:G1')->getFill()->setFillType(\PHPExcel_Style_Fill::FILL_SOLID)->getStartColor()->setRGB('00FF00');
-            //căn giữa
-            $sheet->getStyle('A1:G1')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
-            //Điền dữ liệu vào các dòng. Dữ liệu lấy từ DB
-            $mt=$_POST['txtmt'];
-            $data=$this->goi->timkiem($mt);
-        
-            while($row=mysqli_fetch_array($data)){
-                $sheet->setCellValue('A'.$rowCount,$rowCount++);
-                $sheet->setCellValue('B'.$rowCount,$row['Manv']);
-                $sheet->setCellValue('C'.$rowCount,$row['Tennv']);
-                $sheet->setCellValue('D'.$rowCount,$row['Gioitinh']);
-                $sheet->setCellValue('E'.$rowCount,$row['Ngaysinh']);
-                $sheet->setCellValue('F'.$rowCount,$row['Quequan']);
-                $sheet->setCellValue('G'.$rowCount,$row['Sdt']);
-            
-            }
-            //Kẻ bảng 
-            $styleAray=array(
-                'borders'=>array(
-                    'allborders'=>array(
-                        'style'=>PHPExcel_Style_Border::BORDER_THIN
-                    )
-                )
-                );
-            $sheet->getStyle('A1:'.'C'.($rowCount))->applyFromArray($styleAray);
-            $objWriter=new PHPExcel_Writer_Excel2007($objExcel);
-            $fileName='ExportExcel.xlsx';
-            $objWriter->save($fileName);
-            header('Content-Disposition: attachment; filename="'.$fileName.'"');
-            header('Content-Type: application/vnd.openxlmformatsofficedocument.speadsheetml.sheet');
-            header('Content-Length: '.filesize($fileName));
-            header('Content-Transfer-Encoding:binary');
-            header('Cache-Control: must-revalidate');
-            header('Pragma: no-cache');
-            readfile($fileName);        
-
-            }
+          
           }
         function vthem(){
             $this->view("Masterlayout",["page"=>"themtt"]);
