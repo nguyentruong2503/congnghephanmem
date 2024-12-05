@@ -25,13 +25,19 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 <button class="toggle-btn" id="toggleSidebar">
 <img src="http://localhost/congnghephanmem/Public/picture/utt.png" style="width:100%;" class="w3-round"></button>
 <ul class="sidebar-menu">
-                <li href="http://localhost/congnghephanmem/Danhsachtk" class="w3-bar-item w3-button w3-padding">
-                    <i class="icon fa fa-user fa-fw w3-margin-right"></i>
-                    <span class="menu-text">Quản Lý Tài Khoản</span>
+                <li  class="w3-bar-item w3-button w3-padding">
+                  <a href="http://localhost/congnghephanmem/Danhsachtk" style="text-decoration: none;">
+                  <i class="icon fa fa-user fa-fw w3-margin-right"></i>
+                  <span class="menu-text">Quản Lý Tài Khoản</span>
+                  </a>
+                    
                 </li>
-                <li href="http://localhost/congnghephanmem/Thongke" class="w3-bar-item w3-button w3-padding">
+                <li class="w3-bar-item w3-button w3-padding">
+                    <a href="http://localhost/congnghephanmem/Thongke" style="text-decoration: none;">
                     <i class="icon fa fa-th-large fa-fw w3-margin-right"></i>
                     <span class="menu-text">Thống Kê</span>
+                    </a>
+                    
                 </li>
                 <li >
                     <i class="icon fa fa-th-large fa-fw w3-margin-right"></i>
@@ -39,26 +45,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
                 </li>
             </ul>
 </div>
-<!-- Sidebar/menu -->
-<!-- <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
-
-  <div class="w3-container">
-    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
-      <i class="fa fa-remove"></i>
-    </a>
-    <img src="http://localhost/congnghephanmem/Public/picture/utt.png" style="width:45%;" class="w3-round"><br><br>
-    <h4><b>Quản lý</b></h4>
-  </div>
-  <div class="w3-bar-block">
-    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>QUẢN LÝ BẰNG TỐT NGHIỆP</a> 
-    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>QUẢN LÝ CHỨNG CHỈ</a>
-    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>QUẢN LÝ SINH VIÊN</a> 
-  </div>
-</nav> -->
-
-
+ 
 <div class="main-content w3-main">
-    <div style= "height: 1200px">
+    <div style= "height: 100%">
         <?php include_once './MVC/Views/Pages/'.$data['page'].'.php'; ?>
     </div>
 </div>
@@ -79,7 +68,7 @@ function w3_close() {
 }
 </script>
 <script src="http://localhost/congnghephanmem/Public/js/phu1.js"></script>
-<script src="http://localhost/congnghephanmem/Public/js/phu4.js"></script>
+<script src="http://localhost/congnghephanmem/Public/js/phumaster.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

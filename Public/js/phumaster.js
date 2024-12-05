@@ -8,9 +8,4 @@ toggleButton.addEventListener('click', () => {
     sidebar.classList.toggle('collapsed');
 });
 
-// Collapse sidebar when clicking on main content
-mainContent.addEventListener('click', () => {
-    if (!sidebar.classList.contains('collapsed')) {
-        sidebar.classList.add('collapsed');
-    }
-});
+
