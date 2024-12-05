@@ -1,0 +1,82 @@
+/* Định dạng cơ bản cho modal */
+.modalx {
+    display: none; /* Ẩn modal mặc định */
+    position: fixed; /* Cố định vị trí modal */
+    z-index: 1000; /* Đảm bảo modal nằm trên cùng */
+    left: 0;
+    top: 0;
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    height: 100%; /* Chiếm toàn bộ chiều cao */
+    background-color: rgba(0, 0, 0, 0.5); /* Nền đen mờ */
+}
+
+/* Hộp thoại bên trong modal */
+.modal-dialog {
+    position: relative;
+    margin: auto;
+    top: 100px; /* Căn cách phần trên */
+    width: 50%; /* Chiều rộng modal */
+    background-color: #fff; /* Nền trắng */
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Đổ bóng */
+    animation: fadeIn 0.3s; /* Hiệu ứng xuất hiện */
+}
+
+/* Hiệu ứng mở modal */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Tiêu đề modal */
+.modal-header {
+    padding: 10px 20px;
+    background-color: #007bff; /* Màu nền tiêu đề */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Nút đóng */
+.modal-header .close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Nội dung modal */
+.modal-body {
+    padding: 20px;
+    font-size: 1rem;
+    color: #333;
+}
+/* other file */
+.form-inline {
+    display: flex;
+    align-items: center; /* Căn chỉnh các phần tử dọc theo trục ngang */
+    flex-wrap: wrap;    /* Đảm bảo không tràn xuống dòng */
+    gap: 10px;          /* Khoảng cách giữa các phần tử */
+    margin-top: 10px;
+}
+
+.form-inline input{
+    margin-right: 10px;
+    margin-left: -10px;
+}
+
+.form-inline label {
+    
+    margin-right: -30px;
+    margin-left: 10px;
+}
+
+button {
+    margin: 0 5px;      /* Khoảng cách giữa các nút */
+}
