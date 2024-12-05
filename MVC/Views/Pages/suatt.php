@@ -20,7 +20,7 @@
 
             <label >Mã SV</label>
             <input readonly type="text" class="form-control dd2" name="txtma" 
-            value="<?php echo $row['Masinhvien'] ?>">
+            value="<?php echo $row['MaSinhVien'] ?>">
 
             </div>
             <div class="khoi1">
@@ -53,7 +53,7 @@
             <div class="khoi1">
             <label >Lớp</label>
             <input type="text" class="form-control dd2" name="txtml" 
-            value="<?php echo $row['MaLop'] ?>">
+            value="<?php echo $row['Lop'] ?>">
             </div>
 
             <div class="khoi1">

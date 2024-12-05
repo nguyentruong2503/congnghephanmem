@@ -59,7 +59,7 @@
             ?> 
                         <tr>
                             <td  class="c stt"><?php echo (++$i) ?></td>
-                            <td class="c ma"><?php echo $row['Masinhvien'] ?></td>
+                            <td class="c ma"><?php echo $row['MaSinhVien'] ?></td>
                             <td id="ten"><?php echo $row['HoTen'] ?></td>
                             <td class="c ns">
                                 <?php 
@@ -68,18 +68,18 @@
                                      echo $a;
                                 ?>
                             </td>
-                            <td class="c gt"><?php echo $row['MaLop'] ?></td>
+                            <td class="c gt"><?php echo $row['Lop'] ?></td>
                             <td class="c sdt"><?php echo $row['MaKhoa'] ?></td>
                             <td  class="c dc"><?php echo $row['Email'] ?></td>
                             <td class="c hd">
                                 <div class="hdong">
                                      <a class="chucnang" 
-                                href="http://localhost/congnghephanmem/Thongtin/vsua/<?php echo $row['Masinhvien'] ?>">Sửa</a>
+                                href="http://localhost/congnghephanmem/Thongtin/vsua/<?php echo $row['MaSinhVien'] ?>">Sửa</a>
                                
                                  <a class="chucnang"  
                                  onclick="return confirm('Bạn có thực sự muốn xóa?')"
 
-                                href="http://localhost/congnghephanmem/Thongtin/xoa/<?php echo $row['Masinhvien'] ?>">Xóa</a>
+                                href="http://localhost/congnghephanmem/Thongtin/xoa/<?php echo $row['MaSinhVien'] ?>">Xóa</a>
                                </div>
                                
                             </td>

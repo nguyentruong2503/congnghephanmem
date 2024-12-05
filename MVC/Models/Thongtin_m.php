@@ -5,7 +5,7 @@
            return mysqli_query($this->con,$sql);
         }
         function timkiem($m){
-            $sql="SELECT * From sinhvien WHERE MaSinhVien like '%$m%'OR HoTen like '%$m%'";                     
+            $sql="SELECT * From sinhvien WHERE( MaSinhVien like '%$m%'OR HoTen like '%$m%') and MaKhoa='cokhi_utt'";                     
            return mysqli_query($this->con,$sql);
         }
         function them($m,$t,$gt,$ns,$qq,$sdt){
