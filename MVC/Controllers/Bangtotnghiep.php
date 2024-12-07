@@ -13,7 +13,7 @@
 
             $this->view('Masterlayout',[
                 'page'=>'Bangtotnghiep_v',
-                'dulieu'=>$this->degree->bangtotnghiep_find2(''),
+                'dulieu'=>$this->degree->findByMaKhoa($_SESSION['Tentaikhoan']),
                 'khoa' => $khoa
             ]);
         }

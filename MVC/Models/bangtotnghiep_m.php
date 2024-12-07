@@ -35,6 +35,12 @@
             return mysqli_query($this->con,$sql);
         }
 
+        function findByMaKhoa($makhoa){
+            $sql = "SELECT * FROM bangtotnghiep WHERE makhoa like '%$makhoa%' ";
+            
+            return mysqli_query($this->con,$sql);
+        }
+
         function bangtotnghiep_update($mabang,$tensv,$masv,$makhoa,$loaibang,$xephang,$ngaycap){
             $sql= "UPDATE `bangtotnghiep` SET `tensinhvien`='$tensv',
             `masinhvien`='$masv',
