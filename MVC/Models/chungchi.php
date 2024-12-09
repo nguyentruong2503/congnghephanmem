@@ -68,6 +68,21 @@ function chungchi_find2($macc){
     $sql="SELECT * FROM chungchi WHERE MaChungchi like '%$macc%'";
     return mysqli_query($this->con,$sql);
 }
+
+function chungchi_byMaKhoa($makhoa){
+    $sql="SELECT * FROM chungchi
+    join sinhvien on chungchi.masinhvien = sinhvien.masinhvien
+     WHERE sinhvien.makhoa = '$makhoa'";
+    return mysqli_query($this->con,$sql);
+}
+
+function chungchi_yc_byMaKhoa($makhoa){
+    $sql="SELECT * FROM pheduyetchungchi
+    join sinhvien on pheduyetchungchi.masinhvien = sinhvien.masinhvien
+     WHERE sinhvien.makhoa = '$makhoa'";
+    return mysqli_query($this->con,$sql);
+}
+
 public function timkiem_sv($masv)
 {
     

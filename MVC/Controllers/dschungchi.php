@@ -8,7 +8,7 @@ class dschungchi extends controller{
     function Get_data(){
         $this->view('Masterlayout',[
             'page'=>'dsyeucau_chungchi',
-            'dulieu'=>$this->ds->chungchi_find('','')
+            'dulieu'=>$this->ds->chungchi_yc_byMaKhoa($_SESSION['Tentaikhoan'])
         ]);
     }
 

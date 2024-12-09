@@ -8,7 +8,7 @@ class dschungchidaduyet extends controller{
     function Get_data(){
         $this->view('Masterlayout',[
             'page'=>'dschungchi',
-            'dulieu'=>$this->ds->chungchi_find2('','')
+            'dulieu'=>$this->ds->chungchi_byMaKhoa($_SESSION['Tentaikhoan'])
         ]);
     }
     function suacc_v($macc){
