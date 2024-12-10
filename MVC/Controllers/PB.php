@@ -62,7 +62,8 @@ class PB extends controller{
                 }
                 else{
                     $kq=$this->dspb->pb_add($makhoa, $tenkhoa, $email);
-                    if($kq)
+                    $kq2 = $this->dspb->add_tk($makhoa);
+                    if($kq && $kq2)
                         echo '<script>alert("Thêm mới thành công!");
                     window.location.href = "http://localhost/congnghephanmem/PB";</script>';
                     else

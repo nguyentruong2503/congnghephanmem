@@ -44,10 +44,10 @@ function pb_find_edit($makhoa) {
     return mysqli_query($this->con, $query);
 }
 
-    // function add_tk($makhoa){
-    //     $sql="INSERT INTO taikhoan VALUES ('$makhoa', '1', 'Department')";
-    //     return mysqli_query($this->con,$sql);
-    // }
+    function add_tk($makhoa){
+        $sql="INSERT INTO taikhoan VALUES ('$makhoa', '111', 'Department')";
+        return mysqli_query($this->con,$sql);
+    }
 }
 ?>
 
