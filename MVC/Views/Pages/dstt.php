@@ -69,7 +69,7 @@
                                 ?>
                             </td>
                             <td class="c gt"><?php echo $row['Lop'] ?></td>
-                            <td class="c sdt"><?php echo $row['MaKhoa'] ?></td>
+                            <td class="c sdt"><?php echo $row['TenKhoa'] ?></td>
                             <td  class="c dc"><?php echo $row['Email'] ?></td>
                             <td class="c hd">
                                 <div class="hdong">

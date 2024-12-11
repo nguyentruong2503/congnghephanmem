@@ -12,14 +12,14 @@
         function timkiem(){ 
             if(isset($_POST['btnTimkiem'])){
                 $mt=$_POST['txtmt'];
-                $dl=$this->goi->timkiem($mt);
+                $dl=$this->goi->timkiem($mt,$_SESSION['Tentaikhoan']);
               $this->view("Masterlayout",["page"=>"dstt","dulieu"=>$dl,"mt"=>$mt]);
 
             }
           
           }
         function vthem(){
-            $this->view("Masterlayout",["page"=>"themtt"]);
+            $this->view("Masterlayout",["page"=>"themtt","khoa"=>$_SESSION['Tentaikhoan']]);
 
         }
         function them(){
@@ -59,13 +59,14 @@
                          }
                     else{
                            $kq=$this->goi->them($m,$t,$ns,$ml,$mk,$eml);
+                      
                               if($kq){
                                      echo '<script>alert("Thêm nhân viên mới thành công!")</script>';
                                      }
                               else{
                                     echo '<script>alert("Thêm nhân viên mới thất bại!")</script>';
                                   }   
-                               $this->view("Masterlayout",["page"=>"dstt","dulieu"=>$this->goi->timkiem("")]);
+                               $this->view("Masterlayout",["page"=>"dstt","dulieu"=>$this->goi->timkiem("",$_SESSION['Tentaikhoan'])]);
 
                           }
                 }
@@ -73,7 +74,7 @@
             }
         }
         function vsua($m){
-            $this->view("Masterlayout",["page"=>"suatt","dulieu"=>$this->goi->tim($m)]);
+            $this->view("Masterlayout",["page"=>"suatt","khoa"=>$_SESSION['Tentaikhoan'],"dulieu"=>$this->goi->tim($m)]);
 
         }
         function sua(){
@@ -97,20 +98,21 @@
                 else{
                     echo '<script>alert("Sửa thất bại!")</script>';
                 }
-                $this->view("Masterlayout",["page"=>"dstt","dulieu"=>$this->goi->timkiem("")]);
+                $this->view("Masterlayout_SV",["page"=>"dstt","dulieu"=>$this->goi->timkiem("",$_SESSION['Tentaikhoan'])]);
                 }
               
             }
         }
         function xoa($m){
             $kq=$this->goi->xoa($m);
+           
             if($kq){
                 echo '<script>alert("Xóa thành công!")</script>';
             }
             else{
                 echo '<script>alert("Xoá thất bại!")</script>';
             }
-            $this->view("Masterlayout",["page"=>"dstt","dulieu"=>$this->goi->timkiem("")]);
+            $this->view("Masterlayout",["page"=>"dstt","dulieu"=>$this->goi->timkiem("",$_SESSION['Tentaikhoan'])]);
 
         }
     }

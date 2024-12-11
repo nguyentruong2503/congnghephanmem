@@ -58,7 +58,7 @@
 
             <div class="khoi1">
             <label >Khoa</label>
-            <input type="text" class="form-control dd2" name="txtmk" 
+            <input type="text" readonly class="form-control dd2" name="txtmk" 
             value="<?php echo $row['MaKhoa'] ?>">
             </div>
 

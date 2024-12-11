@@ -1,5 +1,7 @@
 <?php
     class OJSinhvien_m extends connectDB{
+
+
         function tracuuchungchi($m1,$m,$loai){
 
             if($loai==1){
@@ -28,6 +30,25 @@
                 echo "Lỗi SQL: " . mysqli_error($this->con);
                 return false;
             }
+        }
+        function delete_cc($macc){
+            $sql="DELETE FROM pheduyetchungchi WHERE MaChungChi='$macc'";
+            return mysqli_query($this->con,$sql);
+        }
+        
+        function sua_chungchi($macc, $tencc, $loaicc, $tensv, $masv, $ngaycapcc){
+            $sql="UPDATE pheduyetchungchi SET MaChungChi='$macc', TenChungChi='$tencc', 
+            LoaiChungChi='$loaicc', TenSinhVien='$tensv', MaSinhVien='$masv', NgayCapChungChi='$ngaycapcc' 
+            WHERE MaChungchi='$macc'";
+            return mysqli_query($this->con,$sql);
+        }
+        function chungchi_find($macc){
+            $sql="SELECT * FROM pheduyetchungchi WHERE MaChungchi ='$macc'";
+            return mysqli_query($this->con,$sql);
+        }
+        function chungchi_find1($masv){
+            $sql="SELECT * FROM pheduyetchungchi WHERE MaSinhVien='$masv'";
+            return mysqli_query($this->con,$sql);
         }
         function checktrungmacc($macc){
      

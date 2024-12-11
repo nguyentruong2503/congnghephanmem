@@ -14,7 +14,7 @@
 
             <div class="khoi1">
                  <label >Mã SV  </label>
-            <input type="text"  placeholder="    Mã Sv"  name="txtma" value=<?php if( isset($data['mnv']) ) echo $data['mnv'] ?> >
+            <input type="text"  placeholder="    Mã SV"  name="txtma" value=<?php if( isset($data['mnv']) ) echo $data['mnv'] ?> >
             </div>
            
             <div class="khoi1">
@@ -38,15 +38,15 @@
             
             <div class="khoi1">
                 <label >Lớp</label>
-            <input type="text"  placeholder="   Malop" name="txtml" value=<?php if( isset($data['ml']) ) echo $data['ml'] ?> >
+            <input type="text"  placeholder="   Tên lớp" name="txtml" value=<?php if( isset($data['ml']) ) echo $data['ml'] ?> >
             </div>  
             <div class="khoi1">
                 <label >Khoa</label>
-            <input type="text"  placeholder="    Makhoa" name="txtmk" value=<?php if( isset($data['mk']) ) echo $data['mk'] ?> >
+            <input type="text"  placeholder="    Makhoa" name="txtmk" readonly value=<?php if( isset($data['mk']) ) echo $data['mk'] ;if( isset($data['khoa']) ) echo $data['khoa'];?> >
             </div>  
             <div class="khoi1">
                    <label >Email</label>
-            <input type="text" placeholder="     Địa Chỉ" name="txteml" value=<?php if( isset($data['eml']) ) echo $data['eml'] ?> >
+            <input type="text" placeholder="     Email" name="txteml" value=<?php  if( isset($data['eml']) ) echo $data['eml'] ?> >
             </div>
           <div class="nut">
             <button type="submit" class="btn btn-primary" name="btnThem">Thêm</button>

@@ -1,16 +1,22 @@
 <?php
     class Thongtin_m extends connectDB{
+       
+        
         function tim($m){
             $sql="SELECT * From sinhvien WHERE MaSinhVien = '$m'";                     
            return mysqli_query($this->con,$sql);
         }
         function timkiem($m,$makhoa){
-            $sql="SELECT * From sinhvien WHERE( MaSinhVien like '%$m%'OR HoTen like '%$m%') and MaKhoa='$makhoa'";                     
+            $sql="SELECT sinhvien.*,khoa.TenKhoa FROM `sinhvien` JOIN`khoa` on khoa.MaKhoa=sinhvien.MaKhoa WHERE( MaSinhVien like '%$m%'OR HoTen like '%$m%') and sinhvien.MaKhoa='$makhoa'";                     
            return mysqli_query($this->con,$sql);
         }
         function them($m,$t,$gt,$ns,$qq,$sdt){
             $sql="INSERT INTO `sinhvien`(`MaSinhVien`, `HoTen`, `NgaySinh`, `Lop`, `MaKhoa`, `Email`) VALUES
              ('$m','$t','$gt','$ns','$qq','$sdt')";
+               $sql1=" INSERT INTO `taikhoan`(`Tentaikhoan`, `Matkhau`, `Loaitaikhoan`)
+               VALUES ('$m','1','User')";       
+          mysqli_query($this->con,$sql1);
+      
              return mysqli_query($this->con,$sql);
         }
         function sua($m,$t,$gt,$ns,$qq,$sdt){
@@ -20,8 +26,15 @@
             return mysqli_query($this->con,$sql);
         }
         function xoa($m){
-            $sql="DELETE FROM sinhvien WHERE `MaSinhVien`='$m' ";
-          
+            $sql="DELETE FROM sinhvien WHERE `MaSinhVien`='$m' "; 
+            $sql0=" DELETE FROM `taikhoan` WHERE Tentaikhoan='$m' ";
+            $sql1="DELETE FROM `bangtotnghiep`  WHERE `MaSinhVien`='$m' "; 
+            $sql2="DELETE FROM `chungchi`  WHERE `MaSinhVien`='$m' "; 
+            $sql3="DELETE FROM `pheduyetchungchi`  WHERE `MaSinhVien`='$m' "; 
+            mysqli_query($this->con,$sql0);  
+            mysqli_query($this->con,$sql1);
+            mysqli_query($this->con,$sql2);
+            mysqli_query($this->con,$sql3);
             return mysqli_query($this->con,$sql);
         }
         function trungma($mnv){
