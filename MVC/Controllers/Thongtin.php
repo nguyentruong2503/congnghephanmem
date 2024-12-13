@@ -59,7 +59,7 @@
                          }
                     else{
                            $kq=$this->goi->them($m,$t,$ns,$ml,$mk,$eml);
-                      
+                          
                               if($kq){
                                      echo '<script>alert("Thêm nhân viên mới thành công!")</script>';
                                      }

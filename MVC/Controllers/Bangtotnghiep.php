@@ -1,5 +1,4 @@
 <?php
-
     class Bangtotnghiep extends controller{
         private $degree;
 
@@ -22,6 +21,19 @@
             $this->view('Masterlayout', [
                 'page' => 'hienthi'
             ]);
+        }
+
+        function inBTN($mabang){
+            $tenkhoa = $this->degree->getTenKhoa($_SESSION['Tentaikhoan']);
+            if (!$tenkhoa) {
+                echo "Không lấy được tên khoa.";
+            }
+            $dl=$this->degree->bangtotnghiep_find2($mabang);
+
+            $this->view('Pages/inBangTotNghiep', [
+                'dulieu' => $dl,
+                'tenkhoa' => $tenkhoa
+            ]); 
         }
 
         function timkiem(){
@@ -80,15 +92,27 @@
                 }
                 else{
 
-                    $kq1=$this->degree->bangtotnghiep_insert($mabang,$tensv,$masv,$makhoa,$loaibang,$xephang,$ngaycap);
-                    if($kq1){
-                        session_unset();
-                        echo '<script>alert("Thêm mới thành công!");
-                    window.location.href = "http://localhost/congnghephanmem/Bangtotnghiep";</script>';
+                    if (!$this->degree->checkChungChi($masv)) {
+                        echo '<script>alert("Sinh viên chưa đủ điều kiện tốt nghiệp");
+                            window.location.href = "http://localhost/congnghephanmem/Bangtotnghiep";</script>';
                     }
-                    else
-                        echo '<script>alert("Thêm mới thất bại!");
-                    window.location.href = "http://localhost/congnghephanmem/Bangtotnghiep";</script>';
+                    else{
+                            $kq1=$this->degree->bangtotnghiep_insert($mabang,$tensv,$masv,$makhoa,$loaibang,$xephang,$ngaycap);
+                            if($kq1){
+                                unset($_SESSION['mabang']);
+                                unset($_SESSION['tensv']);
+                                unset($_SESSION['masv']);
+                                unset($_SESSION['makhoa']);
+                                unset($_SESSION['loaibang']);
+                                unset($_SESSION['xephang']);
+                                unset($_SESSION['ngaycap']);
+                                echo '<script>alert("Thêm mới thành công!");
+                            window.location.href = "http://localhost/congnghephanmem/Bangtotnghiep";</script>';
+                            }
+                            else
+                                echo '<script>alert("Thêm mới thất bại!");
+                            window.location.href = "http://localhost/congnghephanmem/Bangtotnghiep";</script>';
+                        }
                 }
             }
 

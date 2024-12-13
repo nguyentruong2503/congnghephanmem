@@ -7,6 +7,15 @@
              return mysqli_query($this->con,$sql);
         }
 
+        function getTenKhoa($makhoa){
+            $sql = "SELECT TenKhoa FROM khoa where MaKhoa = '$makhoa' ";
+            $result =  mysqli_query($this->con,$sql);
+
+            $row = mysqli_fetch_assoc($result);
+            return $row['TenKhoa'];
+
+        }
+
         function bangtotnghiep_insert($mabang,$tensv,$masv,$makhoa,$loaibang,$xephang,$ngaycap){
             $sql = "INSERT INTO bangtotnghiep VALUES ('$mabang',N'$tensv','$masv','$makhoa',N'$loaibang',N'$xephang','$ngaycap', N'Chưa nhận' ) ";
             return mysqli_query($this ->con,$sql);
@@ -62,7 +71,18 @@
             return mysqli_query($this->con, $query);
         }
         
+        function checkChungChi($masv) {
+            $sql = "SELECT COUNT(DISTINCT LoaiChungChi) AS SoLuongChungChi
+                    FROM chungchi 
+                    WHERE MaSinhVien = '$masv' 
+                    AND (LoaiChungChi = N'Tin học' OR LoaiChungChi = N'Ngoại ngữ')
+                    GROUP BY MaSinhVien
+                    HAVING COUNT(DISTINCT LoaiChungChi) = 2"; 
         
-
+            $result = mysqli_query($this->con, $sql);
+            $row = mysqli_fetch_assoc($result);
+            return $row['SoLuongChungChi'] == 2; 
+        }
+        
     }
 ?>

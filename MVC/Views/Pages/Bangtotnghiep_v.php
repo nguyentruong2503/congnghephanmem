@@ -79,6 +79,9 @@
                                   <a class="btn btn-outline-danger" 
                                   href="http://localhost/congnghephanmem/Bangtotnghiep/xoa/<?php echo $row['MaBang'] ?>"
                                       onclick="return confirm('Bạn có chắc chắn muốn xóa không?');">Xóa</a>
+                                  <a class="btn btn-success" 
+                                  href="http://localhost/congnghephanmem/Bangtotnghiep/inBTN/<?php echo $row['MaBang']; ?>"
+                                  >In</a>
                               </td>
                           </tr>
               <?php
