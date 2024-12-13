@@ -33,5 +33,20 @@
             }
             return $kq;
         }
+
+        public function check_account($tentaikhoan,$matkhau,$loaitaikhoan){
+            $sql = "SELECT Tentaikhoan FROM taikhoan WHERE Tentaikhoan = '$tentaikhoan' and Matkhau = '$matkhau' and Loaitaikhoan = '$loaitaikhoan'";
+            $dl=mysqli_query($this->con,$sql);
+            $kq=false;
+            if(mysqli_num_rows($dl)>0){
+                $kq=true;
+            }
+            return $kq;
+        }
+    
+        public function changepass($tentaikhoan,$matkhau) {
+            $sql= "UPDATE taikhoan SET  Matkhau ='$matkhau' WHERE Tentaikhoan='$tentaikhoan' ";
+            return mysqli_query($this->con,$sql); 
+        }
     }
 ?>
