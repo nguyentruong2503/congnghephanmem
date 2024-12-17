@@ -11,7 +11,6 @@
             font-family: 'Arial', sans-serif;
         }
         .container {
-            margin-top: 50px;
             background-color: white;
             padding: 40px;
             border-radius: 10px;
@@ -98,7 +97,7 @@
                 </select>
 
                 <label for="txttensv">Tên sinh viên</label>
-                <input type="text" class="form-control dd2" name="txttensv" id="txttensv" placeholder="Nhập tên sinh viên" readonly>
+                <input type="text" class="form-control dd2" name="txttensv" id="txttensv" placeholder="Nhập tên sinh viên" required>
 
                 <label for="txtmasv">Mã sinh viên</label>
                 <input type="text" class="form-control dd2" name="txtmasv" id="txtmasv" placeholder="Nhập mã sinh viên" required>
