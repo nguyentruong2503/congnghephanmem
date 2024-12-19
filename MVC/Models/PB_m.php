@@ -48,6 +48,8 @@ function pb_find_edit($makhoa) {
         $sql="INSERT INTO taikhoan VALUES ('$makhoa', '111', 'Department')";
         return mysqli_query($this->con,$sql);
     }
+
+    
 }
 ?>
 

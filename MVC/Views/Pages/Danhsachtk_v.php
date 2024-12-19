@@ -10,6 +10,7 @@
       <button type="button" class="w3-button w3-white" onclick="openModal()" data-toggle="modalx" data-target="#myModal" ><i class="fa fa-diamond w3-margin-right"></i>Thêm Mới</button>
 
       <div>
+      
       <form action="http://localhost/congnghephanmem/Danhsachtk/timkiem" method="post">
         <div class="form-inline">
         <label style="width:150px; margin-left: 0px;">Tên Tài Khoản</label>

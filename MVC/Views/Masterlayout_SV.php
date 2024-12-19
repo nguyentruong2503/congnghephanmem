@@ -7,6 +7,8 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="http://localhost/congnghephanmem/Public/css/phuchangepass.css">
+
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 </style>
@@ -26,7 +28,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <a href="http://localhost/congnghephanmem/Profile" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Thông tin cá nhân</a> 
     <a href="http://localhost/congnghephanmem/Tracuu" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>Tra cứu </a>
     <a href="http://localhost/congnghephanmem/yeucau_chungchi" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>Nộp chứng chỉ</a> 
-    <a href="http://localhost/congnghephanmem/yeucau_chungchi/Get_data1" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>Chứng chỉ đã gửi</a> 
 
   </div>
   
@@ -74,6 +75,56 @@ function w3_close() {
     document.getElementById("myOverlay").style.display = "none";
 }
 </script>
+
+
+<div id="passwordModal" class="modal" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; padding: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); border-radius: 8px; z-index: 1000;">
+<button class="close-btn" onclick="closeModal()">×</button>  
+<div class="change-password-container">
+<form action="http://localhost/congnghephanmem/Profile/changepass" method="POST">
+    <?php if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+        }
+        $tenTaiKhoan = $_SESSION['Tentaikhoan'] ?? "Không xác định"; 
+        $loaitaikhoan = $_SESSION['Loaitaikhoan'] ?? "Không xác định"; 
+    ?>
+  
+    <input style="display: none;" type="text" id="current-password" name="tentk" value = "<?php echo $tenTaiKhoan ?>">
+    <input style="display: none;" type="text" id="current-password" name="loaitk" value = "<?php echo $loaitaikhoan ?>">
+        <h1>Đổi mật khẩu</h1>
+        
+          <div class="form-group">
+                <label for="current-password">Mật khẩu hiện tại</label>
+                <input type="password" id="current-password" name="current_password" >
+            </div>
+            <div class="form-group">
+                <label for="new-password">Mật khẩu mới</label>
+                <input type="password" id="new-password" name="new_password" >
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Xác nhận mật khẩu mới</label>
+                <input type="password" id="confirm-password" name="confirm_password" >
+            </div>
+            <button type="submit" class="btn" name = "btnChange">Đổi mật khẩu</button>
+
+        </form>
+    </div>
+</div>
+
+<!-- Overlay -->
+<div id="overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 110%; background: rgba(0, 0, 0, 0.5); z-index: 999;" onclick="closeModal()"></div>
+<script>
+function showModal(event) {
+  event.preventDefault(); 
+  document.getElementById("passwordModal").style.display = "block";
+  document.getElementById("overlay").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("passwordModal").style.display = "none";
+  document.getElementById("overlay").style.display = "none";
+}
+</script>
+
 
 </body>
 </html>
