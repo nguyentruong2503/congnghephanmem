@@ -28,6 +28,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <a href="http://localhost/congnghephanmem/Profile" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Thông tin cá nhân</a> 
     <a href="http://localhost/congnghephanmem/Tracuu" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>Tra cứu </a>
     <a href="http://localhost/congnghephanmem/yeucau_chungchi" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>Nộp chứng chỉ</a> 
+    <a href=""  onclick="showModal(event)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"> <i class="icon fa fa-th-large fa-fw w3-margin-right"></i> Đổi Mật Khẩu</a>
+    <a href="http://localhost/congnghephanmem/Login" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>Đăng Xuất</a>
 
   </div>
   
@@ -77,7 +79,7 @@ function w3_close() {
 </script>
 
 
-<div id="passwordModal" class="modal" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; padding: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); border-radius: 8px; z-index: 1000;">
+<div id="passwordModal" class="modal_changePass" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; padding: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); border-radius: 8px; z-index: 1000;">
 <button class="close-btn" onclick="closeModal()">×</button>  
 <div class="change-password-container">
 <form action="http://localhost/congnghephanmem/Profile/changepass" method="POST">

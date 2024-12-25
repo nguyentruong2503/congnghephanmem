@@ -9,7 +9,7 @@
     z-index: 999;
   }
   
-  .modal {
+  .modal_changePass {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -24,7 +24,7 @@
     text-align: center;
   }
   
-  .modal {
+  .modal_changePass {
     animation: fadeIn 0.7s ease-out;
   }
   
