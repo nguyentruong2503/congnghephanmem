@@ -66,7 +66,7 @@
                                     <form method="post" action="http://localhost/congnghephanmem/Bangtotnghiep/capNhatTrangThaiBangTotNghiep">
                                         <input type="hidden" name="MaBang" value="<?php echo $row['MaBang']; ?>">
                                         <?php if ($row['TrangThai'] == 'Chưa nhận') { ?>
-                                            <button type="submit" class="btn btn-danger">Chưa nhận</button>
+                                            <button type="submit" class="w3-button w3-red">Chưa nhận</button>
                                         <?php } else { ?>
                                             <button type="button" class="btn btn-success" disabled>Đã nhận</button>
                                         <?php } ?>
@@ -79,6 +79,9 @@
                                   <a class="btn btn-outline-danger" 
                                   href="http://localhost/congnghephanmem/Bangtotnghiep/xoa/<?php echo $row['MaBang'] ?>"
                                       onclick="return confirm('Bạn có chắc chắn muốn xóa không?');">Xóa</a>
+                                  <a class="btn btn-success" 
+                                  href="http://localhost/congnghephanmem/Bangtotnghiep/inBTN/<?php echo $row['MaBang']; ?>"
+                                  >In</a>
                               </td>
                           </tr>
               <?php
