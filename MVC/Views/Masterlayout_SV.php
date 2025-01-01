@@ -29,7 +29,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <a href="http://localhost/congnghephanmem/Tracuu" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>Tra cứu </a>
     <a href="http://localhost/congnghephanmem/yeucau_chungchi" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>Nộp chứng chỉ</a> 
     <a href=""  onclick="showModal(event)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"> <i class="icon fa fa-th-large fa-fw w3-margin-right"></i> Đổi Mật Khẩu</a>
-    <a href="http://localhost/congnghephanmem/LoginLogin" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>Nộp chứng chỉ</a> 
+    <a href="http://localhost/congnghephanmem/Login" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>Đăng XuấtXuất</a> 
 
   </div>
   
