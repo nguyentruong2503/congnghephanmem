@@ -22,11 +22,7 @@ function drawPieChart(canvasId, labels, data) {
             responsive: true,
             plugins: {
                 legend: {
-<<<<<<< HEAD
                     position: 'right'
-=======
-                    position: 'top'
->>>>>>> 672dc37f6f552cb2265ba67f4638ae0743fe08aa
                 }
             }
         }
