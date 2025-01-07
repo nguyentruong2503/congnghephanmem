@@ -95,6 +95,7 @@
                 <select name="slloaicc" class="form-control dd2" id="slloaicc">
                     <option value="Ngoại ngữ" <?php if(isset($data["loaicc"] ) &&  $data["loaicc"]=="Ngoại ngữ"){echo 'selected';}?>>Ngoại ngữ</option>
                     <option value="Tin học" <?php if(isset($data["loaicc"] ) &&  $data["loaicc"]=="Tin học"){    echo 'selected';} ?>>Tin học</option>
+                    <option value="Khác" <?php if(isset($data["loaicc"] ) &&  $data["loaicc"]=="Khác"){    echo 'selected';} ?>>Khác</option>
                 </select>
 
                 <label for="txttensv">Tên sinh viên</label>

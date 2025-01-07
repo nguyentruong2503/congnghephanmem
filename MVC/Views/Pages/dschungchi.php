@@ -108,7 +108,9 @@
              
             </td>
             <td>
-            <a href="http://localhost/congnghephanmem/dschungchidaduyet/inchungchi/<?php echo $row['MaChungChi']; ?>" class="btn btn-outline-primary">In </a>
+            <?php if ($row['LoaiChungChi'] != 'Khác') { ?>
+            <a href="http://localhost/congnghephanmem/dschungchidaduyet/inchungchi/<?php echo $row['MaChungChi']; ?>" class="btn btn-outline-primary">In</a>
+        <?php } ?>
             </td>
                   
                 </tr>

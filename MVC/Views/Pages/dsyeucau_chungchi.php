@@ -99,13 +99,13 @@
                              
                                 <form method="POST" action="">
                                     <input type="hidden" name="macc" value="<?php echo $row['MaChungChi']; ?>">
-                                    <button type="submit" name="xacnhan" class="btn btn-outline-primary">Xác nhận</button>
+                                    <button type="submit" name="xacnhan" class="w3-button w3-blue">Xác nhận</button>
                                 </form>
 
                              
                                 <form method="POST" action="">
                                     <input type="hidden" name="macc" value="<?php echo $row['MaChungChi']; ?>">
-                                    <button type="submit" name="huybo" class="btn btn-outline-danger">Hủy bỏ</button>
+                                    <button type="submit" name="huybo" class="w3-button w3-red">Hủy bỏ</button>
                                 </form>
                             <?php } else { ?>
                                 <span>Đã xử lý</span>
