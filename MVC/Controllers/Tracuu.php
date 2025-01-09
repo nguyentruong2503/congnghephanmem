@@ -20,8 +20,7 @@
                     $this->view("Masterlayout_SV",["page"=>"Tracuu","mt"=>$mt,"mt1"=>$mt1,"cb"=>$loai,"get"=>-1]);
 
                 }
-
-                $dl=$this->goi->tracuuchungchi($mt1,$mt,$loai);
+                $dl=$this->goi->tracuuchungchi($mt1,$mt,$loai);                          
               $this->view("Masterlayout_SV",["page"=>"Tracuu","dulieu"=>$dl,"mt"=>$mt,"mt1"=>$mt1,"cb"=>$loai]);
 
             }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Danh sách chứng chỉ</title>
+    <title>Danh sách yêu cầu</title>
  
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -57,8 +57,10 @@
 <body>
 
 <div class="container">
-    <h2>Quản lý chứng chỉ1</h2>
-    
+    <h2>Danh sách yêu cầu nộp chứng chỉ của bạn</h2>
+    <div class="btn btn-outline-primary" style="margin:5px;   color: #2c3e50;">
+       <a style="   text-decoration: none;    color:rgb(230, 235, 240);" href="http://localhost/congnghephanmem/yeucau_chungchi/vthem">Thêm</a>
+            </div>
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -121,60 +123,6 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
 
-<?php
-
-if (isset($_POST['xacnhan']) && isset($_POST['macc'])) {
-    $macc = $_POST['macc'];
-
-    
-    $con = mysqli_connect("localhost", "root", "", "cnpm");
-
-   
-    $query = "SELECT * FROM pheduyetchungchi WHERE MaChungChi = '$macc'";
-    $result = mysqli_query($con, $query);
-
-    if ($result && mysqli_num_rows($result) > 0) {
-      
-        $row = mysqli_fetch_assoc($result);
-
-       
-        $insertQuery = "INSERT INTO chungchi (MaChungChi, TenChungChi, LoaiChungChi, TenSinhVien, MaSinhVien, NgayCapChungChi) 
-                        VALUES ('" . $row['MaChungChi'] . "', '" . $row['TenChungChi'] . "', '" . $row['LoaiChungChi'] . "', 
-                                '" . $row['TenSinhVien'] . "', '" . $row['MaSinhVien'] . "', '" . $row['NgayCapChungChi'] . "')";
-
-        if (mysqli_query($con, $insertQuery)) {
-            
-              $updateQuery = "UPDATE pheduyetchungchi SET Trangthai = 'Đã duyệt' WHERE MaChungChi = '$macc'";
-            mysqli_query($con, $updateQuery);
-
-          
-            echo "<script>alert('Chứng chỉ đã được duyệt và thêm vào bảng chungchi.'); window.location.href='';</script>";
-        } else {
-            echo "Lỗi khi thêm vào bảng chungchi: " . mysqli_error($con);
-        }
-    } else {
-        echo "Không tìm thấy chứng chỉ với mã: " . $macc;
-    }
-
-    mysqli_close($con); 
-}
-
-if (isset($_POST['huybo']) && isset($_POST['macc'])) {
-    $macc = $_POST['macc'];
-    
-    
-    $con = mysqli_connect("localhost", "root", "", "cnpm");
-
- 
-    $query = "UPDATE pheduyetchungchi SET Trangthai = 'Từ chối' WHERE MaChungChi = '$macc'";
-
-    if (mysqli_query($con, $query)) {
-        echo "<script>alert('Chứng chỉ đã bị hủy bỏ.'); window.location.href='';</script>";
-    } else {
-        echo "Lỗi: " . mysqli_error($con);
-    }
-}
-?>
 
 
 </body>
