@@ -108,7 +108,7 @@
              
             </td>
             <td>
-            <?php if ($row['LoaiChungChi'] != 'Khác') { ?>
+            <?php if ($row['TenChungChi'] == 'Tiếng anh nội bộ' || $row['TenChungChi'] == 'Tin học nội bộ') { ?>
             <a href="http://localhost/congnghephanmem/dschungchidaduyet/inchungchi/<?php echo $row['MaChungChi']; ?>" class="btn btn-outline-primary">In</a>
         <?php } ?>
             </td>

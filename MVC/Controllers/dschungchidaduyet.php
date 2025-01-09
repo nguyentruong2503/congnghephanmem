@@ -13,20 +13,18 @@ class dschungchidaduyet extends controller{
     }
     function suacc_v($macc){
        
-            $this->view('suacc',[
+            $this->view('Masterlayout',[
                 'page'=>'suacc',
-                'dulieu'=>$this->ds->chungchi_find1($macc,'')
+                'dulieu'=>$this->ds->chungchi_find1($macc)
             ]);
         
     }
     public function inchungchi($macc){
         
-        $conn = mysqli_connect('localhost', 'root', '', 'cnpm');
-        
-      
-        $sql = "SELECT * FROM chungchi WHERE MaChungChi = ?";
+        $conn = mysqli_connect('localhost', 'root', '', 'cnpm');            
+        $sql = "SELECT * FROM chungchi WHERE MaChungChi = '$macc'";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("i", $macc); 
+       
         $stmt->execute();
         $result = $stmt->get_result();
         $chungchi = $result->fetch_all(MYSQLI_ASSOC);
@@ -71,7 +69,7 @@ function timkiem(){
     if(isset($_POST['btnSearch'])){
         $macc = $_POST['search'];
         $masv = $_POST['search'];
-        $dl=$this->ds->timkiem_ccdaduyet($macc,$masv);
+        $dl=$this->ds->timkiem_ccdaduyet($macc,$masv,$_SESSION['Tentaikhoan']);
       
         $this->view('Masterlayout',[
             'page'=>'dschungchi',

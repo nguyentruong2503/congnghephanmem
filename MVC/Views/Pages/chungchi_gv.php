@@ -94,10 +94,11 @@
                 <select name="slloaicc" class="form-control dd2" id="slloaicc">
                     <option value="Ngoại ngữ">Ngoại ngữ</option>
                     <option value="Tin học">Tin học</option>
+                    
                 </select>
 
                 <label for="txttensv">Tên sinh viên</label>
-                <input type="text" class="form-control dd2" name="txttensv" id="txttensv" placeholder="Nhập tên sinh viên" required>
+                <input type="text" class="form-control dd2" name="txttensv" id="txttensv" placeholder="Nhập tên sinh viên" readonly>
 
                 <label for="txtmasv">Mã sinh viên</label>
                 <input type="text" class="form-control dd2" name="txtmasv" id="txtmasv" placeholder="Nhập mã sinh viên" required>
@@ -127,7 +128,7 @@
             xhttp.open("GET", "http://localhost/congnghephanmem/search.php?masv=" + masv, true);
             xhttp.onreadystatechange = function() {
                 if (xhttp.readyState == 4 && xhttp.status == 200) {
-                    document.getElementById("txttensv").value = xhttp.responseText; 
+                    document.getElementById("txttensv").value = xhttp.responseText.trim(); 
                 }
             };
             xhttp.send();

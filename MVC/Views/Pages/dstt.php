@@ -20,9 +20,7 @@
             <div class="nuttk">
                 <button id="ntk" type="submit"  name="btnTimkiem">Tìm kiếm</button>             
             </div>
-            <div class="nuttk">
-                <button id="ntk1" type="submit"  name="btnxuat">Xuất Excel</button>
-            </div>   
+            
 
            
 
