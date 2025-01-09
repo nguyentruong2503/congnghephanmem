@@ -126,17 +126,7 @@
               <tr>
                 <td>Mã khoa:</td>
                 <td>
-                <select style="width: 280px" name="ddlMakhoa" id="" class="dd10">
-                    <option value="">---Chọn khoa---</option>
-                    <?php
-                    if(isset($data['khoa']) && mysqli_num_rows($data['khoa']) > 0){
-                        while($r4 = mysqli_fetch_assoc($data['khoa'])){
-                            $selected = (isset($_SESSION['MaKhoa']) && $_SESSION['MaKhoa'] == $r4['MaKhoa']) ? 'selected' : '';
-                            echo '<option value="'.$r4['MaKhoa'].'" ' . $selected . '>'.$r4['TenKhoa'].'</option>';
-                        }
-                    }
-                    ?>
-                </select>
+                  <input style = "width: 280px" type="text" name="ddlMakhoa" class="dd1" value="<?php echo isset($_SESSION['Tentaikhoan']) ? $_SESSION['Tentaikhoan'] : ''; ?>" readonly>
                 </td>
               </tr>
               <tr>

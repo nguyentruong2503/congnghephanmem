@@ -29,6 +29,7 @@
             font-weight: bold;
         }
         .dd2 {
+            height: 45px;
             width: 100%;
             padding: 10px;
             font-size: 16px;
@@ -61,7 +62,7 @@
                 <label>Mã sinh viên</label>
                 <input style="width: 280px" type="text" name="txtMasv" value="<?php echo $row['MaSinhVien'] ?>" />
                 <label>Mã khoa</label>
-                <select class="form-control dd2" name="ddlMakhoa">
+                <select  class="dd2" name="ddlMakhoa" disabled>
                     <option value="">---Chọn khoa---</option>
                     <?php
                         if(isset($data['khoa']) && mysqli_num_rows($data['khoa']) > 0){
@@ -73,7 +74,7 @@
                     ?>
                 </select>
                 <label>Loại bằng</label>
-                    <select class="form-control dd2" name="ddlLoaibang">
+                    <select class="dd2" name="ddlLoaibang">
                         <option value="">---Chọn loại bằng---</option>
                         <?php
                             $loaiBang = ['Cử nhân', 'Kỹ sư', 'Thạc sĩ'];
@@ -85,7 +86,7 @@
                     </select>
 
                 <label>Xếp hạng</label>
-                    <select class="form-control dd2" name="ddlXephang">
+                    <select class="dd2" name="ddlXephang">
                         <option value="">---Chọn xếp hạng---</option>
                         <?php
                             $xephang = ['Xuất sắc', 'Giỏi', 'Khá', 'Trung bình'];
