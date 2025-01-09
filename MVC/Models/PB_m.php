@@ -49,7 +49,16 @@ function pb_find_edit($makhoa) {
         return mysqli_query($this->con,$sql);
     }
 
-    
+    function pb_del_sv($makhoa){
+        $sql="DELETE FROM sinhvien WHERE MaKhoa = '$makhoa'";
+        return mysqli_query($this->con,$sql);
+    }
+    function pb_del_tk($makhoa){
+        $sql="DELETE FROM taikhoan WHERE Tentaikhoan = '$makhoa'";
+        return mysqli_query($this->con,$sql);
+    }
+
+
 }
 ?>
 

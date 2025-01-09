@@ -125,6 +125,8 @@ class PB extends controller{
 
     function del($makhoa){
         $kq=$this->dspb->pb_del($makhoa);
+        $kq1=$this->dspb->pb_del_sv($makhoa);
+        $kq2=$this->dspb->pb_del_tk($makhoa);
 
 
         if($kq){
