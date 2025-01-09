@@ -61,10 +61,10 @@
                            $kq=$this->goi->them($m,$t,$ns,$ml,$mk,$eml);
                           
                               if($kq){
-                                     echo '<script>alert("Thêm nhân viên mới thành công!")</script>';
+                                     echo '<script>alert("Thêm mới thành công!")</script>';
                                      }
                               else{
-                                    echo '<script>alert("Thêm nhân viên mới thất bại!")</script>';
+                                    echo '<script>alert("Thêm mới thất bại!")</script>';
                                   }   
                                $this->view("Masterlayout",["page"=>"dstt","dulieu"=>$this->goi->timkiem("",$_SESSION['Tentaikhoan'])]);
 

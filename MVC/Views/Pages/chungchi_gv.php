@@ -94,6 +94,7 @@
                 <select name="slloaicc" class="form-control dd2" id="slloaicc">
                     <option value="Ngoại ngữ">Ngoại ngữ</option>
                     <option value="Tin học">Tin học</option>
+                    
                 </select>
 
                 <label for="txttensv">Tên sinh viên</label>
@@ -127,7 +128,7 @@
             xhttp.open("GET", "http://localhost/congnghephanmem/search.php?masv=" + masv, true);
             xhttp.onreadystatechange = function() {
                 if (xhttp.readyState == 4 && xhttp.status == 200) {
-                    document.getElementById("txttensv").value = xhttp.responseText; 
+                    document.getElementById("txttensv").value = xhttp.responseText.trim(); 
                 }
             };
             xhttp.send();

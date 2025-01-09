@@ -95,14 +95,12 @@
                 <select name="slloaicc" class="form-control dd2" id="slloaicc">
                     <option value="Ngoại ngữ" <?php if(isset($data["loaicc"] ) &&  $data["loaicc"]=="Ngoại ngữ"){echo 'selected';}?>>Ngoại ngữ</option>
                     <option value="Tin học" <?php if(isset($data["loaicc"] ) &&  $data["loaicc"]=="Tin học"){    echo 'selected';} ?>>Tin học</option>
-                    <option value="Khác" <?php if(isset($data["loaicc"] ) &&  $data["loaicc"]=="Khác"){    echo 'selected';} ?>>Khác</option>
                 </select>
 
-                <label for="txttensv">Tên sinh viên</label>
+                <label for="txttensv">Họ Tên</label>
                 <input type="text" class="form-control dd2" name="txttensv" id="txttensv" placeholder="Nhập tên sinh viên" required value="<?php if(isset($data["tensv"] ) && !empty( $data["tensv"])){echo $data["tensv"];}?>" >
 
-                <label for="txtmasv">Mã sinh viên</label>
-                <input type="text" class="form-control dd2" name="txtmasv" id="txtmasv" placeholder="Nhập mã sinh viên" required value="<?php if(isset($data["tensv"] ) && !empty( $data["masv"])){echo $data["masv"];}?>" >
+                
 
                 <label for="txtngaycapcc">Ngày cấp chứng chỉ</label>
                 <input type="date" class="form-control dd2" name="txtngaycapcc" id="txtngaycapcc" required value="<?php if(isset($data["ngaycapcc"] ) && !empty( $data["ngaycapcc"])){echo $data["ngaycapcc"];}?>" >

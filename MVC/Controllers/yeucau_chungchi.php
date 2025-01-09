@@ -5,12 +5,8 @@ class yeucau_chungchi extends controller{
     {
         $this->ds=$this->model('OJSinhvien_m');
     }
+ 
     function Get_data(){
-        $this->view('Masterlayout_SV',[
-            'page'=>'svnopchungchi'
-        ]);
-    }
-    function Get_data1(){
         $this->view('Masterlayout_SV',[
             'page'=>'dsyeucau_chungchi_sv',
             'dulieu'=>$this->ds->chungchi_find1($_SESSION['Tentaikhoan'])
@@ -38,13 +34,20 @@ class yeucau_chungchi extends controller{
             'dulieu'=>$this->ds->chungchi_find1($_SESSION['Tentaikhoan'])
         ]);
     }    
+
+    function vthem(){     
+        $this->view('Masterlayout_SV',[ 
+            'page'=>'svnopchungchi'
+            
+        ]);   
+}
     function themmoi(){
         if(isset($_POST['btnyeucau'])){
             $macc = $_POST['txtmacc'];
             $tencc = $_POST['txttencc'];
             $loaicc = $_POST['slloaicc'];
             $tensv = $_POST['txttensv'];
-            $masv = $_POST['txtmasv'];
+            $masv = $_SESSION['Tentaikhoan'];
             $ngaycapcc = $_POST['txtngaycapcc'];
             $trangthai = !empty($trangthai) ? $trangthai : 'Chờ duyệt';
         
@@ -70,7 +73,8 @@ class yeucau_chungchi extends controller{
                 else
                     echo '<script>alert("Thêm mới thất bại!")</script>';
                     $this->view('Masterlayout_SV',[
-                        'page'=>'svnopchungchi'                       
+                        'page'=>'dsyeucau_chungchi_sv',
+                        'dulieu'=>$this->ds->chungchi_find1($_SESSION['Tentaikhoan'])
                     ]);
             }
          
@@ -81,8 +85,7 @@ class yeucau_chungchi extends controller{
         $this->view('Masterlayout_SV',[ 
             'page'=>'suayeucaucc',
             'dulieu'=>$this->ds->chungchi_find($macc)
-        ]);
-    
+        ]);   
 }
 function suacc(){
     if(isset($_POST['suacc'])){
